@@ -42,17 +42,17 @@ public class AttackModeSelection : MonoBehaviour
     {
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         button.interactable = false;
-        troop[currentIndex+positionIndex].gameObject.SetActive(true);
+        Instantiate(troop[currentIndex], new Vector3(positionIndex, 0, 0), Quaternion.identity);
         
-        if(currentIndex+positionIndex==0|| currentIndex + positionIndex == 5 || currentIndex + positionIndex == 7)
+        if(currentIndex+positionIndex==-4|| currentIndex + positionIndex == 2 || currentIndex + positionIndex == 5)
         {
             score += 1;
-        }else if(currentIndex + positionIndex == 6 || currentIndex + positionIndex == 1 || currentIndex + positionIndex == 2)
+        }else if(currentIndex + positionIndex == 4 || currentIndex + positionIndex == -2 || currentIndex + positionIndex == -3)
         {
             score -= 1;
         }
 
-            selection.SetActive(true);
+        selection.SetActive(true);
         choicesLeft -= 1;
         placement.SetActive(false);
     }
