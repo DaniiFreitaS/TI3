@@ -14,7 +14,8 @@ public class ShowResults : MonoBehaviour
         }
         else
         {
-            resultText.text = "Você falhou, tente rever o posicionamento das tropas";
+            string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
+            resultText.text = "Você falhou! " + mistakes;
         }
     }
 

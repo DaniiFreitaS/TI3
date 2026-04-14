@@ -1,14 +1,30 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AttackModeSelection : MonoBehaviour
 {
+    //posicionamento
     public GameObject placement;
     public GameObject selection;
+    private float[] lanePositions = {-4f, 0f, 4f};
+    private int[,] resultTable = new int[3, 3]
+    {
+    { 1,  0, -1},
+    {-1,  0,  1},
+    { -1, 1,  0}
+    };
+
+
+    //tropas
     public GameObject[] troop;
     private int currentIndex;
+    public static List<string> wrongTroops = new List<string>();
+    private string[] troopErrors = { "Arqueiros são vulneráveis na frente! ", "Escudeiros não conseguem defender ninguém estando atrás! ", "Lanceiros não conseguem acertar de trás! "};
+
+    //outros
     public static int score;
     private int choicesLeft;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +33,7 @@ public class AttackModeSelection : MonoBehaviour
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
+        wrongTroops.Clear();
     }
 
     // Update is called once per frame
@@ -42,14 +59,17 @@ public class AttackModeSelection : MonoBehaviour
     {
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         button.interactable = false;
-        Instantiate(troop[currentIndex], new Vector3(positionIndex, 0, 0), Quaternion.identity);
+
+        float xPos = lanePositions[positionIndex];
+        Instantiate(troop[currentIndex], new Vector3(xPos, 0, 0), Quaternion.identity);
         
-        if(currentIndex+positionIndex==-4|| currentIndex + positionIndex == 2 || currentIndex + positionIndex == 5)
+        int result = resultTable[currentIndex, positionIndex];
+
+        score += result;
+
+        if (result == -1)
         {
-            score += 1;
-        }else if(currentIndex + positionIndex == 4 || currentIndex + positionIndex == -2 || currentIndex + positionIndex == -3)
-        {
-            score -= 1;
+            wrongTroops.Add(troopErrors[currentIndex]);
         }
 
         selection.SetActive(true);
