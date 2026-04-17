@@ -9,7 +9,7 @@ public class AttackModeSelection : MonoBehaviour
     //posicionamento
     public GameObject placement;
     public GameObject selection;
-    private float[] lanePositions = {-4f, 0f, 4f};
+    private float[] lanePositions = {-2f, 0f, 2f};
     private int[,] resultTable = new int[3, 3]
     {
     { 1,  0, -1},
@@ -75,5 +75,10 @@ public class AttackModeSelection : MonoBehaviour
         selection.SetActive(true);
         choicesLeft -= 1;
         placement.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("AttackSelection");
     }
 }
