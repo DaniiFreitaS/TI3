@@ -8,14 +8,29 @@ public class ShowResults : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (AttackModeSelection.score >= 1)
+        if (Defesa.currentMode == 0)
         {
-            resultText.text = "Vitória! Sua pontuação foi " + AttackModeSelection.score*100;
+            if (AttackModeSelection.score >= 1)
+            {
+                resultText.text = "Vitória! Sua pontuação foi " + AttackModeSelection.score * 1000 + " pontos";
+            }
+            else
+            {
+                string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
+                resultText.text = "Você falhou! " + mistakes;
+            }
         }
         else
         {
-            string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
-            resultText.text = "Você falhou! " + mistakes;
+            if (Defesa.score >= 0)
+            {
+                resultText.text = "Vitória! Sua pontuação foi " + Defesa.score + "  pontos";
+            }
+            else
+            {
+                string mistakes = string.Join(" ", Defesa.wrongDefenses);
+                resultText.text = "Você falhou! " + mistakes;
+            }
         }
     }
 

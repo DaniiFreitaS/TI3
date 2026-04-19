@@ -33,7 +33,6 @@ public class AttackModeSelection : MonoBehaviour
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
-        wrongTroops.Clear();
     }
 
     // Update is called once per frame
