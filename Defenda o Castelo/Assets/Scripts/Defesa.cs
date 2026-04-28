@@ -93,4 +93,8 @@ public class Defesa : MonoBehaviour
     {
         text.text = "Escolha seus soldados";
     }
+    public void DefRestart()
+    {
+        SceneManager.LoadScene("DefensePosition");
+    }
 }
