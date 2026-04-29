@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,6 +10,7 @@ public class AttackModeSelection : MonoBehaviour
     //posicionamento
     public GameObject placement;
     public GameObject selection;
+    private Animator[] animator;
     private float[] lanePositions = {-2f, 0f, 2f};
     private int[,] resultTable = new int[3, 3]
     {
@@ -33,6 +35,7 @@ public class AttackModeSelection : MonoBehaviour
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
+        animator = new Animator[3];
     }
 
     // Update is called once per frame
@@ -40,7 +43,8 @@ public class AttackModeSelection : MonoBehaviour
     {
         if(choicesLeft == 0)
         {
-            SceneManager.LoadScene("ResultScreen");
+            StartCoroutine(GoToResults());
+            choicesLeft = 1;
         }
     }
 
@@ -60,7 +64,8 @@ public class AttackModeSelection : MonoBehaviour
         button.interactable = false;
 
         float xPos = lanePositions[positionIndex];
-        Instantiate(troop[currentIndex], new Vector3(xPos, 0, 0), Quaternion.identity);
+        GameObject instance = Instantiate(troop[currentIndex], new Vector3(xPos, 0, 0), Quaternion.identity);
+        animator[positionIndex] = instance.GetComponent<Animator>();
         
         int result = resultTable[currentIndex, positionIndex];
 
@@ -79,5 +84,15 @@ public class AttackModeSelection : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("AttackSelection");
+    }
+
+    IEnumerator GoToResults()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            animator[i].SetTrigger("SwitchScene");
+        }
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("ResultScreen");
     }
 }
