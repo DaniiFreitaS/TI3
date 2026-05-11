@@ -157,7 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnDefesa
   prefabToSpawn: {fileID: 8980810267694782244, guid: e0ea1df780690f64b80b0090b2cbc806, type: 3}
-  pontoDeSpawn: {fileID: 3070286670553686311}
+  pontoDeSpawn:
+  - {fileID: 3070286670553686311}
+  novaEscala: 6
 --- !u!1 &1454568435660480658
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +404,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnDefesa
   prefabToSpawn: {fileID: 8980810267694782244, guid: e0ea1df780690f64b80b0090b2cbc806, type: 3}
-  pontoDeSpawn: {fileID: 3981826233413921103}
+  pontoDeSpawn:
+  - {fileID: 3981826233413921103}
+  - {fileID: 5829456669291967081}
+  novaEscala: 6
 --- !u!1 &5853534006484880025
 GameObject:
   m_ObjectHideFlags: 0
