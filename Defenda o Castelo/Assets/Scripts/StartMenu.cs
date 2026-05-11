@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class StartMenu : MonoBehaviour
 {
+
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,12 +14,7 @@ public class StartMenu : MonoBehaviour
         Defesa.currentMode = 0;
         AttackModeSelection.wrongTroops.Clear();
         AttackModeSelection.score = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        animator = GetComponent<Animator>();
     }
 
     public void GoAttack()
@@ -27,5 +25,22 @@ public class StartMenu : MonoBehaviour
     public void GoDefense() 
     {
         SceneManager.LoadScene("DefensePosition");
+    }
+
+    public void CloseCredits(GameObject panelCredits)
+    {
+        StartCoroutine(EndCredits(panelCredits));
+    }
+
+    public void PlayAnimations(string triggerName)
+    {
+        animator.SetTrigger(triggerName);
+    }
+
+    IEnumerator EndCredits(GameObject panelCredits)
+    {
+        animator.SetTrigger("ClosePanel");
+        yield return new WaitForSeconds(1f);
+        panelCredits.SetActive(false);
     }
 }
