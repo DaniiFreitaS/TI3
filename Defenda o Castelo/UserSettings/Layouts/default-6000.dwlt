@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1858
     height: 1037
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 76
+  controlID: 18
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 29
+  controlID: 19
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -1086,7 +1086,22 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -1296
+      - m_Data: -12106
+      - m_Data: -11890
+      - m_Data: -11664
+      - m_Data: -11412
+      - m_Data: -11184
+      - m_Data: -9734
+      - m_Data: -9518
+      - m_Data: -9298
+      - m_Data: -8852
+      - m_Data: -8634
+      - m_Data: -7508
+      - m_Data: -7300
+      - m_Data: -7096
+      - m_Data: -6886
+      - m_Data: -6652
+      - m_Data: -1386
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1595,9 +1610,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 92.42472, y: -35.54756, z: 160.08197}
+    m_Target: {x: 114.71399, y: -112.075676, z: 419.63022}
     speed: 2
-    m_Value: {x: 92.42472, y: -35.54756, z: 160.08197}
+    m_Value: {x: 114.71399, y: -112.075676, z: 419.63022}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1643,13 +1658,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.23832205, y: -0.44355032, z: 0.12362175, w: 0.8551001}
+    m_Target: {x: 0.19199136, y: -0.0779347, z: 0.015296499, w: 0.9781847}
     speed: 2
-    m_Value: {x: 0.23813482, y: -0.4448296, z: 0.123978294, w: 0.85442835}
+    m_Value: {x: 0.19196689, y: -0.07940135, z: 0.015584363, w: 0.97806007}
   m_Size:
-    m_Target: 116.24582
+    m_Target: 245.50143
     speed: 2
-    m_Value: 116.24582
+    m_Value: 234.9296
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1770,7 +1785,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Terrain
+    - Assets/Materials
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1780,7 +1795,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Terrain
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\GitHub\TI3\Defenda o Castelo
   m_LockTracker:
@@ -1789,12 +1804,14 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 47164
+    - m_Data: 47134
     m_LastClickedID:
-      m_Data: 47164
+      m_Data: 47134
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46742
+    - m_Data: 46820
+    - m_Data: 47136
+    - m_Data: 47142
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -1829,7 +1846,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46742
+    - m_Data: 46820
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
