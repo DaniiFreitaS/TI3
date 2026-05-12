@@ -17,14 +17,9 @@ public class StartMenu : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void GoAttack()
+    public void PlayGame(string gameMode)
     {
-        SceneManager.LoadScene("AttackSelection");
-    }
-
-    public void GoDefense() 
-    {
-        SceneManager.LoadScene("DefensePosition");
+        StartCoroutine(GoGame(gameMode));
     }
 
     public void CloseCredits(GameObject panelCredits)
@@ -42,5 +37,12 @@ public class StartMenu : MonoBehaviour
         animator.SetTrigger("ClosePanel");
         yield return new WaitForSeconds(1f);
         panelCredits.SetActive(false);
+    }
+
+    IEnumerator GoGame(string modeName)
+    {
+        animator.SetTrigger("PlayGame");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(modeName);
     }
 }

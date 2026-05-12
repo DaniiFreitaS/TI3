@@ -750,14 +750,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 724013505}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: GoDefense
-        m_Mode: 1
+        m_MethodName: PlayGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DefensePosition
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &209869438
@@ -1180,7 +1180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2198889, y: 0.235125}
   m_AnchorMax: {x: 0.7928889, y: 0.58425}
-  m_AnchoredPosition: {x: -6.7697754, y: -5.499756}
+  m_AnchoredPosition: {x: -6.7697754, y: -5.499695}
   m_SizeDelta: {x: 9.356201, y: 19.51471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476455725
@@ -2124,14 +2124,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 724013505}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: GoAttack
-        m_Mode: 1
+        m_MethodName: PlayGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AttackSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &901816126
