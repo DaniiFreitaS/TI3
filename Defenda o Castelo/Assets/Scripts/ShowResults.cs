@@ -33,15 +33,4 @@ public class ShowResults : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Return()
-    {
-        SceneManager.LoadScene("StartScreen");
-    }
 }

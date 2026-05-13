@@ -10,7 +10,8 @@ public class AttackModeSelection : MonoBehaviour
     //posicionamento
     public GameObject placement;
     public GameObject selection;
-    private Animator[] animator;
+    public GameObject alertTextPrefab;
+    public Animator[] animator;
     private float[] lanePositions = {-2f, 0f, 2f};
     private int[,] resultTable = new int[3, 3]
     {
@@ -29,30 +30,34 @@ public class AttackModeSelection : MonoBehaviour
     //outros
     public static int score;
     private int choicesLeft;
+    public GameObject resetButton;
+    private List<Button> buttonsSaved = new List<Button>();
+    private List<GameObject> troopsSaved = new List<GameObject>();
+    private List<Button> panelsSaved = new List<Button>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
-        animator = new Animator[3];
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(choicesLeft == 0)
         {
-            StartCoroutine(GoToResults());
+            animator[3].SetTrigger("Expand");
             choicesLeft = 1;
+            resetButton.SetActive(false);
         }
     }
 
     public void GetTroop(int troopIndex)
     {
-       Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
-
-        button.interactable = false;
+        Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        buttonsSaved.Add(button);
+        button.gameObject.SetActive(false);
         currentIndex = troopIndex;
         placement.SetActive(true);
         selection.SetActive(false);
@@ -62,9 +67,11 @@ public class AttackModeSelection : MonoBehaviour
     {
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         button.interactable = false;
+        panelsSaved.Add(button);
 
         float xPos = lanePositions[positionIndex];
         GameObject instance = Instantiate(troop[currentIndex], new Vector3(xPos, 0, 0), Quaternion.identity);
+        troopsSaved.Add(instance);
         animator[positionIndex] = instance.GetComponent<Animator>();
         
         int result = resultTable[currentIndex, positionIndex];
@@ -74,6 +81,15 @@ public class AttackModeSelection : MonoBehaviour
         if (result == -1)
         {
             wrongTroops.Add(troopErrors[currentIndex]);
+
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(instance.transform.position);
+            Transform canvas = gameObject.transform;
+            GameObject dmg = Instantiate(
+                alertTextPrefab,
+                screenPos,
+                Quaternion.identity,
+                canvas
+            );
         }
 
         selection.SetActive(true);
@@ -83,16 +99,41 @@ public class AttackModeSelection : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("AttackSelection");
+        if (troopsSaved.Count > 0)
+        {
+            choicesLeft += 1;
+            int lastIndex = troopsSaved.Count - 1;
+            buttonsSaved[lastIndex].gameObject.SetActive(true);
+            panelsSaved[lastIndex].interactable = true;
+            Destroy(troopsSaved[lastIndex]);
+            troopsSaved.RemoveAt(lastIndex);
+            buttonsSaved.RemoveAt(lastIndex);
+            panelsSaved.RemoveAt(lastIndex);
+        }
+        else
+        {
+            return;
+        }
     }
 
+    public void Cancel(string animationName)
+    {
+        animator[3].SetTrigger(animationName);
+        resetButton.SetActive(true);
+        choicesLeft = 0;
+        Restart();
+    }
+    public void CallCoroutine(string coroutine)
+    {
+        StartCoroutine(coroutine);
+    }
     IEnumerator GoToResults()
     {
         for (int i = 0; i < 3; i++)
         {
             animator[i].SetTrigger("SwitchScene");
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("ResultScreen");
     }
 }

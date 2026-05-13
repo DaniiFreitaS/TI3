@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 14631226}
   - component: {fileID: 14631225}
   - component: {fileID: 14631229}
+  - component: {fileID: 14631230}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowResults
   resultText: {fileID: 806058607}
+--- !u!114 &14631230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14631224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a302d0bf18aa8649ac56e92e122ac6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonQuit
 --- !u!1 &272384935
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,8 +330,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 14631229}
-        m_TargetAssemblyTypeName: ShowResults, Assembly-CSharp
+      - m_Target: {fileID: 14631230}
+        m_TargetAssemblyTypeName: ButtonQuit, Assembly-CSharp
         m_MethodName: Return
         m_Mode: 1
         m_Arguments:
