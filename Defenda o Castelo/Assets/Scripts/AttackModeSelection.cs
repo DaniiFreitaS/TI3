@@ -97,8 +97,9 @@ public class AttackModeSelection : MonoBehaviour
         placement.SetActive(false);
     }
 
-    public void Restart()
+    IEnumerator Restart()
     {
+        yield return new WaitForSeconds(0.4f);
         if (troopsSaved.Count > 0)
         {
             choicesLeft += 1;
@@ -109,10 +110,6 @@ public class AttackModeSelection : MonoBehaviour
             troopsSaved.RemoveAt(lastIndex);
             buttonsSaved.RemoveAt(lastIndex);
             panelsSaved.RemoveAt(lastIndex);
-        }
-        else
-        {
-            return;
         }
     }
 
