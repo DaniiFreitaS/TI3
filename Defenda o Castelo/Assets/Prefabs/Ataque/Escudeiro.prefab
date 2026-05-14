@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5722911237194180511}
   - component: {fileID: 2193481825081782866}
   - component: {fileID: -861425518145148004}
+  - component: {fileID: -9021926653458889918}
   m_Layer: 0
   m_Name: Escudeiro
   m_TagString: Untagged
@@ -136,6 +137,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-9021926653458889918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4828037522346623964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2afee3ea9354444afff2157b844c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrefabID
+  ID: 2
 --- !u!1001 &6989526294661995715
 PrefabInstance:
   m_ObjectHideFlags: 0

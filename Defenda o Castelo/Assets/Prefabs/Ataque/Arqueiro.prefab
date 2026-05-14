@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 685436821715255881}
   - component: {fileID: 5273534809356540254}
   - component: {fileID: -549530924655920875}
+  - component: {fileID: -7877845788504053668}
   m_Layer: 0
   m_Name: Arqueiro
   m_TagString: Untagged
@@ -136,6 +137,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7877845788504053668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980810267694782244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2afee3ea9354444afff2157b844c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrefabID
+  ID: 1
 --- !u!1001 &7996664758127105060
 PrefabInstance:
   m_ObjectHideFlags: 0

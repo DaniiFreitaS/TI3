@@ -769,7 +769,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 1920}
+  m_TargetSize: {x: 201, y: 358}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -784,10 +784,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -960
-    m_VBaseRangeMax: 960
+    m_HBaseRangeMin: -100.5
+    m_HBaseRangeMax: 100.5
+    m_VBaseRangeMin: -179
+    m_VBaseRangeMax: 179
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -807,7 +807,7 @@ MonoBehaviour:
       y: 21
       width: 468
       height: 358
-    m_Scale: {x: 0.18645833, y: 0.18645833}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 234, y: 179}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -815,12 +815,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1254.972
-      y: -960
-      width: 2509.944
-      height: 1920
+      x: -234
+      y: -179
+      width: 468
+      height: 358
     m_MinimalGUI: 1
-  m_defaultScale: 0.18645833
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 468, y: 379}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -1385,9 +1385,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 7359.702, y: 1905.4998, z: 113.4904}
+    m_Target: {x: 128.9952, y: 258.69595, z: 123.15777}
     speed: 2
-    m_Value: {x: 716.01434, y: 807.3481, z: -0.46426135}
+    m_Value: {x: 7359.702, y: 1905.4998, z: 113.4904}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1433,13 +1433,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.033303473, y: -0.0030029532, z: 0.00010029067, w: 0.99944365}
+    m_Target: {x: 0.10155335, y: -0.10574835, z: 0.010857188, w: 0.9891383}
     speed: 2
     m_Value: {x: -0.033303473, y: 0.0030029535, z: -0.00010029067, w: -0.9994437}
   m_Size:
-    m_Target: 2049.732
+    m_Target: 556.0857
     speed: 2
-    m_Value: 535.7429
+    m_Value: 2049.732
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1584,7 +1584,7 @@ MonoBehaviour:
       m_Data: 49920
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46214
+    - m_Data: 46308
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1617,7 +1617,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 46214
+    - m_Data: 46308
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
