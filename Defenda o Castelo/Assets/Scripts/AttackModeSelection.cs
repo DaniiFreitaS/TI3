@@ -117,7 +117,6 @@ public class AttackModeSelection : MonoBehaviour
     {
         animator[3].SetTrigger(animationName);
         resetButton.SetActive(true);
-        choicesLeft = 0;
         Restart();
     }
     public void CallCoroutine(string coroutine)
