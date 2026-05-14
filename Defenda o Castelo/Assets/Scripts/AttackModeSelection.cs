@@ -34,7 +34,7 @@ public class AttackModeSelection : MonoBehaviour
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
     private List<Button> panelsSaved = new List<Button>();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         currentIndex = 0;

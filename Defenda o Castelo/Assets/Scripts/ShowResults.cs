@@ -22,14 +22,14 @@ public class ShowResults : MonoBehaviour
         }
         else
         {
-            if (Defesa.score >= 0)
+            if (GerenciadorDeSpawn.wrongPlaces == 1)
             {
-                resultText.text = "Vitória! Sua pontuação foi " + Defesa.score + "  pontos";
+                resultText.text = "Vitória! Sua pontuação foi " + 2000 + "  pontos";
             }
             else
             {
                 string mistakes = string.Join(" ", Defesa.wrongDefenses);
-                resultText.text = "Você falhou! " + mistakes;
+                resultText.text = "Você falhou! Arqueiros não tem boa visão na porta! Lanceiros não conseguem atacar na torre!";
             }
         }
     }

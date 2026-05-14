@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Necessário para gerenciar o Button
-using UnityEngine.SceneManagement; // Necessário para as cenas
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class GerenciadorDeSpawn : MonoBehaviour
 {
@@ -10,33 +13,38 @@ public class GerenciadorDeSpawn : MonoBehaviour
     public GameObject prefabSelecionado;
 
     [Header("Configurações de UI e Cenas")]
-    public Button botaoVerResultado; // Arraste o botão de resultado aqui no Inspector
-    public string cenaVitoria = "Vitoria";
-    public string cenaDerrota = "Derrota";
+    public GameObject botaoVerResultado;
+    //public GameObject twinPanel;
 
-    private int resultadofinal = 0;
+    public static int resultadofinal = 0;
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
+    public static int wrongPlaces;
+
+    private List<Button> buttonsSaved = new List<Button>();
+    private List<GameObject> troopsSaved = new List<GameObject>();
+    private List<Button> panelsSaved = new List<Button>();
+
+    bool isTwin = false;
 
     private void Awake()
     {
-        // Define que a "instancia" é este script atual
         instancia = this;
     }
 
     private void Start()
     {
-        // Desativa o botão de resultado assim que o jogo começa
-        if (botaoVerResultado != null)
-        {
-            botaoVerResultado.interactable = false;
-        }
+        wrongPlaces = 1;
+        Defesa.currentMode = 1;
     }
 
-    // Função para os botoes no canvas
     public void SelecionarPrefabInimigo(GameObject prefab)
     {
+        Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        buttonsSaved.Add(button);
+        button.gameObject.SetActive(false);
         prefabSelecionado = prefab;
-        Debug.Log("Você selecionou a tropa: " + prefab.name);
+        instancia.prefabSelecionado = prefab;
+        troopsSaved.Add(prefab);
     }
 
     // Sua função modificada, agora controlando também o botão!
@@ -45,35 +53,46 @@ public class GerenciadorDeSpawn : MonoBehaviour
         if (acertou)
         {
             resultadofinal++;
+            wrongPlaces = 1;
+        }
+        else
+        {
+            resultadofinal--;
+            wrongPlaces = -1;
         }
 
-        totalDeSpawns++;
+            totalDeSpawns++;
+    }
 
-        // Se já colocou as 2 tropas, liga o botão de resultado
+    private void FixedUpdate()
+    {
         if (totalDeSpawns >= 2 && botaoVerResultado != null)
         {
-            botaoVerResultado.interactable = true;
+            botaoVerResultado.SetActive(true);
+            totalDeSpawns = -1;
         }
     }
 
     public void Resultado()
     {
-        if (resultadofinal > 1)
-        {
-            // vitoria
-            SceneManager.LoadScene(cenaVitoria);
-        }
-        else
-        {
-            // derrota
-            SceneManager.LoadScene(cenaDerrota);
-        }
+        SceneManager.LoadScene("ResultScreen");
     }
 
-    // Função para o seu botão de Restart
-    public void ReiniciarJogo()
+    public void VoltarAtras()
     {
-        string cenaAtual = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(cenaAtual);
+        SceneManager.LoadScene("DefensePosition");
+        /*
+        if (totalDeSpawns == -1)
+        {
+            totalDeSpawns = 2;
+        }
+        totalDeSpawns -= 1;
+        wrongPlaces *= -1;
+        int lastIndex = troopsSaved.Count - 1;
+        buttonsSaved[lastIndex].gameObject.SetActive(true);
+        troopsSaved[lastIndex].SetActive(false);
+        troopsSaved.RemoveAt(lastIndex);
+        buttonsSaved.RemoveAt(lastIndex);
+    */
     }
 }
