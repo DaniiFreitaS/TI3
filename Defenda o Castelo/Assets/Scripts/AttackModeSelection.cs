@@ -30,6 +30,7 @@ public class AttackModeSelection : MonoBehaviour
     //outros
     public static int score;
     private int choicesLeft;
+    private bool zeroChoice;
     public GameObject resetButton;
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
@@ -40,15 +41,16 @@ public class AttackModeSelection : MonoBehaviour
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
+        zeroChoice = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(choicesLeft == 0)
+        if(zeroChoice)
         {
             animator[3].SetTrigger("Expand");
-            choicesLeft = 1;
+            zeroChoice = false;
             resetButton.SetActive(false);
         }
     }
@@ -94,6 +96,10 @@ public class AttackModeSelection : MonoBehaviour
 
         selection.SetActive(true);
         choicesLeft -= 1;
+        if (choicesLeft == 0)
+        {
+            zeroChoice = true;
+        }
         placement.SetActive(false);
     }
 
