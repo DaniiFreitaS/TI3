@@ -18,6 +18,7 @@ public class SpawnDefesa : MonoBehaviour
         {
             foreach (Transform i in pontoDeSpawn)
             {
+                Debug.Log(i);
                 GameObject novoObjeto = Instantiate(prefabDaVez, i.position, i.rotation);
                 novoObjeto.transform.localScale = new Vector3(novaEscala, novaEscala, novaEscala);
             }
