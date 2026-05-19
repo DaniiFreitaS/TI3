@@ -2119,6 +2119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CasteloComDispensa
       objectReference: {fileID: 0}
+    - target: {fileID: 2643682850634592139, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aca4e1d96fc2f964ba12e42f4482bfa8, type: 2}
     - target: {fileID: 3394154683077987630, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: pontoDeSpawn.Array.size
       value: 2
