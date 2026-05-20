@@ -11,20 +11,17 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     [Header("Prefab Selecionado pela UI")]
     public GameObject prefabSelecionado;
+    public GameObject textoAviso;
 
     [Header("Configurações de UI e Cenas")]
     public GameObject botaoVerResultado;
-    //public GameObject twinPanel;
-
     public static int resultadofinal = 0;
+    private int confirmIndex;
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
     public static int wrongPlaces;
 
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
-    private List<Button> panelsSaved = new List<Button>();
-
-    bool isTwin = false;
 
     private void Awake()
     {
@@ -39,6 +36,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     public void SelecionarPrefabInimigo(GameObject prefab)
     {
+        textoAviso.SetActive(true);
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         buttonsSaved.Add(button);
         button.gameObject.SetActive(false);
@@ -47,9 +45,9 @@ public class GerenciadorDeSpawn : MonoBehaviour
         troopsSaved.Add(prefab);
     }
 
-    // Sua função modificada, agora controlando também o botão!
     public void Somador(bool acertou)
     {
+        textoAviso.SetActive(false);
         if (acertou)
         {
             resultadofinal++;
@@ -68,31 +66,35 @@ public class GerenciadorDeSpawn : MonoBehaviour
     {
         if (totalDeSpawns >= 2 && botaoVerResultado != null)
         {
+            confirmIndex = 0;
             botaoVerResultado.SetActive(true);
             totalDeSpawns = -1;
         }
     }
 
-    public void Resultado()
+    public void Confirm()
     {
-        SceneManager.LoadScene("ResultScreen");
+        if (confirmIndex == 0)
+        {
+            SceneManager.LoadScene("ResultScreen");
+        }else if(confirmIndex == 1)
+        {
+            SceneManager.LoadScene("StartScreen");
+        }else if (confirmIndex == 2)
+        {
+            SceneManager.LoadScene("DefensePosition");
+        }
+    }
+
+    public void MenuInicial()
+    {
+        confirmIndex = 1;
+        botaoVerResultado.SetActive(true);
     }
 
     public void VoltarAtras()
     {
-        SceneManager.LoadScene("DefensePosition");
-        /*
-        if (totalDeSpawns == -1)
-        {
-            totalDeSpawns = 2;
-        }
-        totalDeSpawns -= 1;
-        wrongPlaces *= -1;
-        int lastIndex = troopsSaved.Count - 1;
-        buttonsSaved[lastIndex].gameObject.SetActive(true);
-        troopsSaved[lastIndex].SetActive(false);
-        troopsSaved.RemoveAt(lastIndex);
-        buttonsSaved.RemoveAt(lastIndex);
-    */
+        confirmIndex = 2;
+        botaoVerResultado.SetActive(true);
     }
 }

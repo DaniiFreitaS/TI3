@@ -11,6 +11,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject placement;
     public GameObject selection;
     public GameObject alertTextPrefab;
+    public GameObject confirmMenu;
     public Animator[] animator;
     private float[] lanePositions = {-2f, 0f, 2f};
     private int[,] resultTable = new int[3, 3]
@@ -31,6 +32,7 @@ public class AttackModeSelection : MonoBehaviour
     public static int score;
     private int choicesLeft;
     private bool zeroChoice;
+    private int confirmIndex;
     public GameObject resetButton;
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
@@ -49,7 +51,8 @@ public class AttackModeSelection : MonoBehaviour
     {
         if(zeroChoice)
         {
-            animator[3].SetTrigger("Expand");
+            confirmIndex = 0;
+            confirmMenu.SetActive(true);
             zeroChoice = false;
             resetButton.SetActive(false);
         }
@@ -121,21 +124,34 @@ public class AttackModeSelection : MonoBehaviour
 
     public void Cancel(string animationName)
     {
-        animator[3].SetTrigger(animationName);
+        confirmMenu.SetActive(false);
         resetButton.SetActive(true);
         Restart();
+    }
+
+    public void Return()
+    {
+        confirmIndex = 1;
+        confirmMenu.SetActive(true);
     }
     public void CallCoroutine(string coroutine)
     {
         StartCoroutine(coroutine);
     }
-    IEnumerator GoToResults()
+    IEnumerator Confirm()
     {
-        for (int i = 0; i < 3; i++)
+        if (confirmIndex == 0)
         {
-            animator[i].SetTrigger("SwitchScene");
+            for (int i = 0; i < 3; i++)
+            {
+                animator[i].SetTrigger("SwitchScene");
+            }
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("ResultScreen");
+        }else if (confirmIndex==1)
+        {
+            yield return new WaitForSeconds(0.3f);
+            SceneManager.LoadScene("StartScreen");
         }
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("ResultScreen");
     }
 }
