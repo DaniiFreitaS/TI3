@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using TMPro;
 
 public class GerenciadorDeSpawn : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     [Header("Configurações de UI e Cenas")]
     public GameObject botaoVerResultado;
+    public TextMeshProUGUI confirmText;
     public static int resultadofinal = 0;
     private int confirmIndex;
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
@@ -68,6 +70,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
         if (totalDeSpawns >= 3 && botaoVerResultado != null)
         {
             confirmIndex = 0;
+            confirmText.text = "Tem certeza que terminou de montar as tropas?";
             botaoVerResultado.SetActive(true);
             totalDeSpawns = -1;
         }
@@ -90,12 +93,14 @@ public class GerenciadorDeSpawn : MonoBehaviour
     public void MenuInicial()
     {
         confirmIndex = 1;
+        confirmText.text = "Tem certeza que quer ir para o menu inicial?";
         botaoVerResultado.SetActive(true);
     }
 
     public void VoltarAtras()
     {
         confirmIndex = 2;
+        confirmText.text = "Tem certeza que quer desfazer suas ações?";
         botaoVerResultado.SetActive(true);
     }
 }

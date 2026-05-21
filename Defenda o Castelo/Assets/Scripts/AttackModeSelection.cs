@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject selection;
     public GameObject alertTextPrefab;
     public GameObject confirmMenu;
+    public TextMeshProUGUI confirmInfo;
     public Animator[] animator;
     private float[] lanePositions = {-2f, 0f, 2f};
     private int[,] resultTable = new int[3, 3]
@@ -52,6 +54,7 @@ public class AttackModeSelection : MonoBehaviour
         if(zeroChoice)
         {
             confirmIndex = 0;
+            confirmInfo.text = "Tem certeza que terminou de montar as tropas?";
             confirmMenu.SetActive(true);
             zeroChoice = false;
             resetButton.SetActive(false);
@@ -132,6 +135,7 @@ public class AttackModeSelection : MonoBehaviour
     public void Return()
     {
         confirmIndex = 1;
+        confirmInfo.text = "Tem certeza que quer ir para o menu inicial?";
         confirmMenu.SetActive(true);
     }
     public void CallCoroutine(string coroutine)
