@@ -21,13 +21,6 @@ public class SpawnDefesa : MonoBehaviour
                 Debug.Log(i);
                 GameObject novoObjeto = Instantiate(prefabDaVez, i.position, i.rotation);
                 novoObjeto.transform.localScale = new Vector3(novaEscala, novaEscala, novaEscala);
-                Canvas canvasDoSpawn = i.GetComponentInChildren<Canvas>();
-
-                if (canvasDoSpawn != null)
-                {
-                    // desabilita o worldcanvas
-                    canvasDoSpawn.gameObject.SetActive(false);
-                }
             }
             Debug.Log("Tropa posicionada!");
 
