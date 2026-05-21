@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 19380795}
   - component: {fileID: 19380798}
   - component: {fileID: 19380799}
+  - component: {fileID: 19380800}
   m_Layer: 5
   m_Name: ButtonClose
   m_TagString: Untagged
@@ -155,10 +156,10 @@ RectTransform:
   - {fileID: 459038566}
   m_Father: {fileID: 2142492647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.27418962, y: 0.2147497}
-  m_AnchorMax: {x: 0.7455894, y: 0.3127093}
-  m_AnchoredPosition: {x: -4.1605225, y: 2.758789}
-  m_SizeDelta: {x: 4.151001, y: -7.6330566}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 540, y: -770.0727}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19380795
 MonoBehaviour:
@@ -303,6 +304,26 @@ MonoBehaviour:
   audioPointerEnter: {fileID: 8300000, guid: ef65cedc7d5c19a42bb8df9feaf9b012, type: 3}
   audioSource: {fileID: 598209284}
   button: {fileID: 19380795}
+--- !u!114 &19380800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19380793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 0
+  m_MinWidth: 0
+  m_MinHeight: -1
+  m_PreferredWidth: 500
+  m_PreferredHeight: 150
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &39518645
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +717,7 @@ GameObject:
   - component: {fileID: 256769642}
   - component: {fileID: 256769645}
   - component: {fileID: 256769646}
+  - component: {fileID: 256769647}
   m_Layer: 5
   m_Name: ButtonConfirm
   m_TagString: Untagged
@@ -718,10 +740,10 @@ RectTransform:
   - {fileID: 193899570}
   m_Father: {fileID: 2142492647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.27418962, y: 0.7308748}
-  m_AnchorMax: {x: 0.72126323, y: 0.8235626}
-  m_AnchoredPosition: {x: -2.130005, y: -2.7799683}
-  m_SizeDelta: {x: 8.220001, y: -5.5599976}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 540, y: -470.0727}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256769642
 MonoBehaviour:
@@ -866,6 +888,26 @@ MonoBehaviour:
   audioPointerEnter: {fileID: 8300000, guid: ef65cedc7d5c19a42bb8df9feaf9b012, type: 3}
   audioSource: {fileID: 598209284}
   button: {fileID: 256769642}
+--- !u!114 &256769647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256769639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 0
+  m_MinWidth: 0
+  m_MinHeight: -1
+  m_PreferredWidth: 500
+  m_PreferredHeight: 150
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &368852043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,8 +3437,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4383,15 +4425,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.46666667, g: 0.30980393, b: 0.59607846, a: 0.74509805}
+  m_Color: {r: 1, g: 0.84313726, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: db0a1e0a663c1a647b0dd41866f83758, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4427,7 +4469,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.16003418}
-  m_SizeDelta: {x: 0, y: -0.099975586}
+  m_SizeDelta: {x: 0, y: -679.8546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142492648
 MonoBehaviour:
@@ -4436,7 +4478,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142492644}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
@@ -4447,11 +4489,11 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_Spacing: 150
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
