@@ -154,10 +154,10 @@ RectTransform:
   - {fileID: 459038566}
   m_Father: {fileID: 2142492647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -584.61}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.27418962, y: 0.2147497}
+  m_AnchorMax: {x: 0.7455894, y: 0.3127093}
+  m_AnchoredPosition: {x: -4.1605225, y: 2.758789}
+  m_SizeDelta: {x: 4.151001, y: -7.6330566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19380795
 MonoBehaviour:
@@ -689,10 +689,10 @@ RectTransform:
   - {fileID: 193899570}
   m_Father: {fileID: 2142492647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -194.87}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.27418962, y: 0.7308748}
+  m_AnchorMax: {x: 0.72126323, y: 0.8235626}
+  m_AnchoredPosition: {x: -2.130005, y: -2.7799683}
+  m_SizeDelta: {x: 8.220001, y: -5.5599976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256769642
 MonoBehaviour:
@@ -4002,7 +4002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.79215693, g: 0.6862745, b: 0.0627451, a: 1}
+  m_Color: {r: 0.46666667, g: 0.30980393, b: 0.59607846, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4043,10 +4043,10 @@ RectTransform:
   - {fileID: 19380794}
   m_Father: {fileID: 1610899796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.29364586}
-  m_AnchorMax: {x: 1, y: 0.70358336}
-  m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 0, y: -7.5999756}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.16003418}
+  m_SizeDelta: {x: 0, y: -0.099975586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142492648
 MonoBehaviour:
@@ -4055,7 +4055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142492644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
