@@ -65,7 +65,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (totalDeSpawns >= 2 && botaoVerResultado != null)
+        if (totalDeSpawns >= 3 && botaoVerResultado != null)
         {
             confirmIndex = 0;
             botaoVerResultado.SetActive(true);
