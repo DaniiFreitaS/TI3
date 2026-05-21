@@ -39,7 +39,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
         textoAviso.SetActive(true);
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         buttonsSaved.Add(button);
-        button.gameObject.SetActive(false);
+        //button.gameObject.SetActive(false);
+        button.interactable = false;
         prefabSelecionado = prefab;
         instancia.prefabSelecionado = prefab;
         troopsSaved.Add(prefab);
