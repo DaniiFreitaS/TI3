@@ -34,6 +34,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
     {
         wrongPlaces = 1;
         Defesa.currentMode = 1;
+        resultadofinal = 0;
     }
 
     public void SelecionarPrefabInimigo(GameObject prefab)
@@ -63,6 +64,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
         }
 
             totalDeSpawns++;
+        Debug.Log("Resultado final " +resultadofinal);
     }
 
     private void FixedUpdate()
@@ -80,6 +82,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
     {
         if (confirmIndex == 0)
         {
+
+            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             SceneManager.LoadScene("ResultScreen");
         }else if(confirmIndex == 1)
         {

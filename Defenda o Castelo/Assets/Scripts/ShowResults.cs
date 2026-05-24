@@ -22,7 +22,7 @@ public class ShowResults : MonoBehaviour
         }
         else
         {
-            if (GerenciadorDeSpawn.wrongPlaces == 1)
+            if (GerenciadorDeSpawn.resultadofinal >= 1)
             {
                 resultText.text = "Vitória! Sua pontuação foi " + 2000 + "  pontos";
             }
