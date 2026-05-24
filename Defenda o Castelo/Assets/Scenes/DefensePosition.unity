@@ -2542,6 +2542,10 @@ PrefabInstance:
       propertyPath: 'pontoDeSpawn.Array.data[1]'
       value: 
       objectReference: {fileID: 1410734436}
+    - target: {fileID: 523479149372960889, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
     - target: {fileID: 1181945777495947556, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2598,6 +2602,18 @@ PrefabInstance:
       propertyPath: 'pontoDeSpawn.Array.data[1]'
       value: 
       objectReference: {fileID: 1018994768}
+    - target: {fileID: 3470772483945378359, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
+    - target: {fileID: 4675439754072973877, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
+    - target: {fileID: 5564585923540475675, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
     - target: {fileID: 8894802904438631234, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: textoAviso
       value: 
