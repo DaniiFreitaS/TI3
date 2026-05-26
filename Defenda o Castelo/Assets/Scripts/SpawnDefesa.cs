@@ -19,7 +19,7 @@ public class SpawnDefesa : MonoBehaviour
             foreach (Transform i in pontoDeSpawn)
             {
                 Debug.Log(i);
-                GameObject novoObjeto = Instantiate(prefabDaVez, i.position, i.rotation);
+                GameObject novoObjeto = Instantiate(prefabDaVez, i.position, Quaternion.Euler(i.rotation.x, i.rotation.y + 90, i.rotation.z));
                 novoObjeto.transform.localScale = new Vector3(novaEscala, novaEscala, novaEscala);
                 Canvas canvasDoSpawn = i.GetComponentInChildren<Canvas>();
 
