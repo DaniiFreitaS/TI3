@@ -1,31 +1,28 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Alert : MonoBehaviour
 {
-    private float moveSpeed = 150f;
-    private float fadeSpeed = 0.5f;
+    private float moveSpeed = 400f;
+    private float fadeSpeed = 120f;
+    private float stopThreshold = 100;
 
-    private TextMeshProUGUI text;
-    private Color color;
+    private Image alert;
 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        color = text.color;
+        alert = GetComponent<Image>();
+        stopThreshold = 100;
     }
 
     void FixedUpdate()
     {
-        transform.position += Vector3.up * moveSpeed * Time.deltaTime;
 
-        color.a -= fadeSpeed * Time.deltaTime;
-
-        text.color = color;
-
-        if (color.a <= 0)
+        if (stopThreshold > 0)
         {
-            Destroy(gameObject);
+            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+            stopThreshold -= fadeSpeed * Time.deltaTime;
         }
     }
 }

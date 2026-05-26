@@ -64,7 +64,6 @@ public class GerenciadorDeSpawn : MonoBehaviour
         }
 
             totalDeSpawns++;
-        Debug.Log("Resultado final " +resultadofinal);
     }
 
     private void FixedUpdate()
@@ -82,8 +81,6 @@ public class GerenciadorDeSpawn : MonoBehaviour
     {
         if (confirmIndex == 0)
         {
-
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             SceneManager.LoadScene("ResultScreen");
         }else if(confirmIndex == 1)
         {

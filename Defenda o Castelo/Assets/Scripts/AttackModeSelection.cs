@@ -39,6 +39,7 @@ public class AttackModeSelection : MonoBehaviour
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
     private List<Button> panelsSaved = new List<Button>();
+    private List<GameObject> alertImage = new List<GameObject>();
     
     void Start()
     {
@@ -92,12 +93,8 @@ public class AttackModeSelection : MonoBehaviour
 
             Vector3 screenPos = Camera.main.WorldToScreenPoint(instance.transform.position);
             Transform canvas = gameObject.transform;
-            GameObject dmg = Instantiate(
-                alertTextPrefab,
-                screenPos,
-                Quaternion.identity,
-                canvas
-            );
+            GameObject alert = Instantiate(alertTextPrefab, screenPos, Quaternion.identity, canvas);
+            //alertImage.Insert(troopsSaved.Count, alert);
         }
 
         selection.SetActive(true);
@@ -111,8 +108,9 @@ public class AttackModeSelection : MonoBehaviour
 
     IEnumerator Restart()
     {
-        yield return new WaitForSeconds(0.4f);
-        if (troopsSaved.Count > 0)
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("AttackSelection");
+        /*if (troopsSaved.Count > 0)
         {
             choicesLeft += 1;
             int lastIndex = troopsSaved.Count - 1;
@@ -122,7 +120,7 @@ public class AttackModeSelection : MonoBehaviour
             troopsSaved.RemoveAt(lastIndex);
             buttonsSaved.RemoveAt(lastIndex);
             panelsSaved.RemoveAt(lastIndex);
-        }
+        }*/
     }
 
     public void Cancel(string animationName)
