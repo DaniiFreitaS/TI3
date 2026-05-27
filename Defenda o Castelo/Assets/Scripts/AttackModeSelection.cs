@@ -94,6 +94,7 @@ public class AttackModeSelection : MonoBehaviour
             Vector3 screenPos = Camera.main.WorldToScreenPoint(instance.transform.position);
             Transform canvas = gameObject.transform;
             GameObject alert = Instantiate(alertTextPrefab, screenPos, Quaternion.identity, canvas);
+            alert.transform.SetAsFirstSibling();
             //alertImage.Insert(troopsSaved.Count, alert);
         }
 
