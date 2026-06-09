@@ -325,7 +325,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 251658240
+    rgba: 2197815296
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1068,10 +1068,10 @@ RectTransform:
   - {fileID: 572049585}
   m_Father: {fileID: 798774129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6.354492, y: -2085}
-  m_SizeDelta: {x: 186.2158, y: 86.123}
+  m_SizeDelta: {x: 1266.2158, y: 2006.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211900611
 MonoBehaviour:
@@ -2381,10 +2381,10 @@ RectTransform:
   - {fileID: 211900610}
   m_Father: {fileID: 724013504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798774130
 MonoBehaviour:
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 251658240
+    rgba: 2197815296
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3545,10 +3545,10 @@ RectTransform:
   - {fileID: 744331850}
   m_Father: {fileID: 798774129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 198.925, y: 86.1226}
+  m_SizeDelta: {x: 1278.925, y: 2006.1226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073225464
 MonoBehaviour:
@@ -4556,7 +4556,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 251658240
+    rgba: 2197815296
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4693,7 +4693,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 3289650
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
