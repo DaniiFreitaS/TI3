@@ -90,11 +90,7 @@ public class AttackModeSelection : MonoBehaviour
         if (result == -1)
         {
             wrongTroops.Add(troopErrors[currentIndex]);
-
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(instance.transform.position);
-            Transform canvas = gameObject.transform;
-            GameObject alert = Instantiate(alertTextPrefab, screenPos, Quaternion.identity, canvas);
-            alert.transform.SetAsFirstSibling();
+            instance.GetComponent<PrefabID>().InstantiateAlert(alertTextPrefab);
             //alertImage.Insert(troopsSaved.Count, alert);
         }
 

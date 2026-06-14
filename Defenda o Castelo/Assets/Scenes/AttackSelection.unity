@@ -2432,7 +2432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackModeSelection
   placement: {fileID: 1028946443}
   selection: {fileID: 1827982076}
-  alertTextPrefab: {fileID: 6229033742971965212, guid: 2515d3cc142ae524f88d07b90f5a4a50, type: 3}
+  alertTextPrefab: {fileID: 3836030829930710174, guid: 4431b84cd72fd8c41bb20833de280211, type: 3}
   confirmMenu: {fileID: 1882251698}
   confirmInfo: {fileID: 2078345554}
   animator:

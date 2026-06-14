@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Alert : MonoBehaviour
 {
-    private float moveSpeed = 400f;
+    private float moveSpeed = 2.5f;
     private float fadeSpeed = 120f;
     private float stopThreshold = 100;
 
