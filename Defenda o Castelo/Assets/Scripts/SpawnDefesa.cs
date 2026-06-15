@@ -68,13 +68,13 @@ public class SpawnDefesa : MonoBehaviour
         switch (local)
         {
             case 1: // Teto
-                return $"{NomeDaTropa(tropa)} foi colocado no teto. O ideal seria um Arqueiro.";
+                return $"{NomeDaTropa(tropa)} não faz nada no teto. ";
 
             case 2: // Porta
-                return $"{NomeDaTropa(tropa)} foi colocado na porta. O ideal seria um Escudeiro.";
+                return $"{NomeDaTropa(tropa)} tem que ficar na frente para defender. ";
 
             case 3: // Frente
-                return $"{NomeDaTropa(tropa)} foi colocado na linha de frente. O ideal seria um Lanceiro.";
+                return $"{NomeDaTropa(tropa)} tem que ficar atrás dos escudeiros. ";
 
             default:
                 return "Uma tropa foi posicionada incorretamente.";
