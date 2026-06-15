@@ -44,7 +44,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject canvas;
     void Start()
     {
-        Debug.Log(Defesa.currentMode);
+        Defesa.currentMode = 1;
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
