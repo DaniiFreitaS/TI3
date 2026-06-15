@@ -25,6 +25,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
 
+    public static List<string> erros = new List<string>();
+
     private void Awake()
     {
         instancia = this;
@@ -35,6 +37,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
         wrongPlaces = 1;
         Defesa.currentMode = 1;
         resultadofinal = 0;
+        erros.Clear();
     }
 
     public void SelecionarPrefabInimigo(GameObject prefab)

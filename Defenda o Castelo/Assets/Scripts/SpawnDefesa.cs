@@ -34,6 +34,16 @@ public class SpawnDefesa : MonoBehaviour
             //verifica a posicao para somar
             int prefabID = prefabDaVez.GetComponent<PrefabID>().ID;
             Debug.Log(prefabID);
+
+
+            if (prefabID != colisorID)
+            {
+                GerenciadorDeSpawn.erros.Add(
+                    GerarMensagemErro(prefabID, colisorID)
+                );
+            }
+
+            
             GerenciadorDeSpawn.instancia.Somador(prefabID == colisorID);
 
             //limpa o prefab selecionado
@@ -51,5 +61,34 @@ public class SpawnDefesa : MonoBehaviour
     private void OnMouseDown()
     {
         Spawnar();
+    }
+
+    private string GerarMensagemErro(int tropa, int local)
+    {
+        switch (local)
+        {
+            case 1: // Teto
+                return $"{NomeDaTropa(tropa)} foi colocado no teto. O ideal seria um Arqueiro.";
+
+            case 2: // Porta
+                return $"{NomeDaTropa(tropa)} foi colocado na porta. O ideal seria um Escudeiro.";
+
+            case 3: // Frente
+                return $"{NomeDaTropa(tropa)} foi colocado na linha de frente. O ideal seria um Lanceiro.";
+
+            default:
+                return "Uma tropa foi posicionada incorretamente.";
+        }
+    }
+
+    private string NomeDaTropa(int id)
+    {
+        switch (id)
+        {
+            case 1: return "Arqueiro";
+            case 2: return "Escudeiro";
+            case 3: return "Lanceiro";
+            default: return "Tropa";
+        }
     }
 }

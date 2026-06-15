@@ -16,8 +16,8 @@ public class ShowResults : MonoBehaviour
             }
             else
             {
-                string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
-                resultText.text = "Você falhou! " + mistakes;
+                string mistakes = string.Join(" ", Defesa.wrongDefenses);
+                resultText.text = "Você falhou! Arqueiros não tem boa visão na porta! Lanceiros não conseguem atacar na torre!";
             }
         }
         else
@@ -28,8 +28,11 @@ public class ShowResults : MonoBehaviour
             }
             else
             {
-                string mistakes = string.Join(" ", Defesa.wrongDefenses);
-                resultText.text = "Você falhou! Arqueiros não tem boa visão na porta! Lanceiros não conseguem atacar na torre!";
+                string mistakes = string.Join("\n", GerenciadorDeSpawn.erros);
+
+                resultText.text =
+                    "Você falhou!\n\n" +
+                    mistakes;
             }
         }
     }
