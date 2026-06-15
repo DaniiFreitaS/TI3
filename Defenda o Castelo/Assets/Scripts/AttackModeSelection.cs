@@ -15,7 +15,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject confirmMenu;
     public TextMeshProUGUI confirmInfo;
     public Animator[] animator;
-    private float[] lanePositions = {-2f, 0f, 2f};
+    private float[] lanePositions = {16f, 20f, 24f};
     private int[,] resultTable = new int[3, 3]
     {
     { 1,  0, -1},
@@ -40,16 +40,18 @@ public class AttackModeSelection : MonoBehaviour
     private List<GameObject> troopsSaved = new List<GameObject>();
     private List<Button> panelsSaved = new List<Button>();
     private List<GameObject> alertImage = new List<GameObject>();
-    
+
+    public GameObject canvas;
     void Start()
     {
+        Debug.Log(Defesa.currentMode);
         currentIndex = 0;
         score = 0;
         choicesLeft = 3;
         zeroChoice = false;
+        StartCoroutine(StartGame());
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if(zeroChoice)
@@ -79,7 +81,7 @@ public class AttackModeSelection : MonoBehaviour
         panelsSaved.Add(button);
 
         float xPos = lanePositions[positionIndex];
-        GameObject instance = Instantiate(troop[currentIndex], new Vector3(xPos, 0, 0), Quaternion.identity);
+        GameObject instance = Instantiate(troop[currentIndex], new Vector3(0, -2.5f, xPos), Quaternion.Euler(0, -90, 0));
         troopsSaved.Add(instance);
         animator[positionIndex] = instance.GetComponent<Animator>();
         
@@ -120,7 +122,7 @@ public class AttackModeSelection : MonoBehaviour
         }*/
     }
 
-    public void Cancel(string animationName)
+    public void Cancel()
     {
         confirmMenu.SetActive(false);
         resetButton.SetActive(true);
@@ -145,12 +147,18 @@ public class AttackModeSelection : MonoBehaviour
             {
                 animator[i].SetTrigger("SwitchScene");
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.3f);
             SceneManager.LoadScene("ResultScreen");
         }else if (confirmIndex==1)
         {
             yield return new WaitForSeconds(0.3f);
             SceneManager.LoadScene("StartScreen");
         }
+    }
+    IEnumerator StartGame()
+    {
+        canvas.SetActive(false);
+        yield return new WaitForSeconds(4.2f);
+        canvas.SetActive(true);
     }
 }

@@ -8,7 +8,7 @@ public class ShowResults : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (Defesa.currentMode == 0)
+        if (Defesa.currentMode == 1)
         {
             if (AttackModeSelection.score >= 1)
             {
@@ -16,8 +16,8 @@ public class ShowResults : MonoBehaviour
             }
             else
             {
-                string mistakes = string.Join(" ", Defesa.wrongDefenses);
-                resultText.text = "Você falhou! Arqueiros não tem boa visão na porta! Lanceiros não conseguem atacar na torre!";
+                string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
+                resultText.text = "Você falhou!" + mistakes;
             }
         }
         else

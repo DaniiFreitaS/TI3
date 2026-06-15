@@ -35,7 +35,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
     private void Start()
     {
         wrongPlaces = 1;
-        Defesa.currentMode = 1;
+        Defesa.currentMode = 0;
         resultadofinal = 0;
         erros.Clear();
     }
