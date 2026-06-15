@@ -1796,6 +1796,7 @@ GameObject:
   - component: {fileID: 632930433}
   - component: {fileID: 632930436}
   - component: {fileID: 632930437}
+  - component: {fileID: 632930438}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1970,6 +1971,20 @@ MonoBehaviour:
   audioPointerEnter: {fileID: 8300000, guid: ef65cedc7d5c19a42bb8df9feaf9b012, type: 3}
   audioSource: {fileID: 598209284}
   button: {fileID: 632930433}
+--- !u!114 &632930438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632930431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efb68c19b32ae4c8785b0cca8d3174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsButton
+  buttonType: 1
+  buttonName: Restart
 --- !u!1 &663365269
 GameObject:
   m_ObjectHideFlags: 0

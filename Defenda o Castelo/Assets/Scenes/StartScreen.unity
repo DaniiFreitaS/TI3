@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 209869440}
   - component: {fileID: 209869441}
   - component: {fileID: 209869442}
+  - component: {fileID: 209869443}
   m_Layer: 5
   m_Name: ButtonDefense
   m_TagString: Untagged
@@ -932,6 +933,18 @@ MonoBehaviour:
       - m_Target: {fileID: 209869441}
         m_TargetAssemblyTypeName: AudioButton, Assembly-CSharp
         m_MethodName: AudioPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209869443}
+        m_TargetAssemblyTypeName: AnalyticsButton, Assembly-CSharp
+        m_MethodName: Register
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1031,6 +1044,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1.5, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &209869443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209869435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efb68c19b32ae4c8785b0cca8d3174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsButton
+  buttonType: 2
+  buttonName: Defesa
 --- !u!1 &211900609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,6 +2923,7 @@ GameObject:
   - component: {fileID: 901816128}
   - component: {fileID: 901816129}
   - component: {fileID: 901816130}
+  - component: {fileID: 901816131}
   m_Layer: 5
   m_Name: ButtonAttack
   m_TagString: Untagged
@@ -2982,6 +3010,18 @@ MonoBehaviour:
       - m_Target: {fileID: 901816129}
         m_TargetAssemblyTypeName: AudioButton, Assembly-CSharp
         m_MethodName: AudioPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209869443}
+        m_TargetAssemblyTypeName: AnalyticsButton, Assembly-CSharp
+        m_MethodName: Register
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3081,6 +3121,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1.5, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &901816131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901816123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efb68c19b32ae4c8785b0cca8d3174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsButton
+  buttonType: 2
+  buttonName: Ataque
 --- !u!1 &922291926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +3869,7 @@ GameObject:
   - component: {fileID: 1215361742}
   - component: {fileID: 1215361743}
   - component: {fileID: 1215361744}
+  - component: {fileID: 1215361745}
   m_Layer: 5
   m_Name: ButtonCredits
   m_TagString: Untagged
@@ -3908,6 +3963,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: OpenPanel
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 209869443}
+        m_TargetAssemblyTypeName: AnalyticsButton, Assembly-CSharp
+        m_MethodName: Register
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1215361743}
@@ -4012,6 +4079,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1.5, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1215361745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215361737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7efb68c19b32ae4c8785b0cca8d3174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsButton
+  buttonType: 1
+  buttonName: "Cr\xE9ditos"
 --- !u!1 &1217249321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,6 +4434,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1785777084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785777086}
+  - component: {fileID: 1785777085}
+  m_Layer: 0
+  m_Name: AnalyticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1785777085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785777084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31118386eadd1e54eabdde7b919baeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsManager
+  emailRemetente: seu@gmail.com
+  senhaApp: suaSenha
+  emailDestinatario: desenvolvedor@gmail.com
+--- !u!4 &1785777086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785777084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1867050802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,3 +4907,4 @@ SceneRoots:
   - {fileID: 1743915842}
   - {fileID: 851683873}
   - {fileID: 1074784347}
+  - {fileID: 1785777086}
