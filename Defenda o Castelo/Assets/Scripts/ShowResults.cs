@@ -17,7 +17,7 @@ public class ShowResults : MonoBehaviour
             else
             {
                 string mistakes = string.Join(" ", AttackModeSelection.wrongTroops);
-                resultText.text = "Você falhou!" + mistakes;
+                resultText.text = "Você falhou! " + mistakes;
             }
         }
         else
