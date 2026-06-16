@@ -71,10 +71,11 @@ public class SpawnDefesa : MonoBehaviour
                 return $"{NomeDaTropa(tropa)} não faz nada no teto. ";
 
             case 2: // Porta
-                return $"{NomeDaTropa(tropa)} tem que ficar na frente para defender. ";
+                
+                return $"{NomeDaTropa(tropa)} tem que ficar atrás dos escudeiros. ";
 
             case 3: // Frente
-                return $"{NomeDaTropa(tropa)} tem que ficar atrás dos escudeiros. ";
+                return $"{NomeDaTropa(tropa)} tem que ficar na frente para defender. ";
 
             default:
                 return "Uma tropa foi posicionada incorretamente.";

@@ -42,7 +42,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     public void SelecionarPrefabInimigo(GameObject prefab)
     {
-        textoAviso.SetActive(true);
+        textoAviso.SetActive(false);
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         buttonsSaved.Add(button);
         //button.gameObject.SetActive(false);
