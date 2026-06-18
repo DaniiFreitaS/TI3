@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ResetTimer : MonoBehaviour
 {
-    float timeLimit = 180f;
+    float timeLimit = 60f;//TEMPO PARA VOLTAR AO MENU EM CASO AFK
     float timer = 0f;
     public static ResetTimer instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,6 +24,8 @@ public class ResetTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //Debug.Log(timer);
         if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
         {
             timer = 0f;
