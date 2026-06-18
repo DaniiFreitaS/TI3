@@ -48,7 +48,7 @@ public class AnalyticsManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        firstButtonClicked = false;
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }

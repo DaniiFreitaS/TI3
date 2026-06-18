@@ -2709,7 +2709,6 @@ GameObject:
   - component: {fileID: 1240777992}
   - component: {fileID: 1240777991}
   - component: {fileID: 1240777996}
-  - component: {fileID: 1240777998}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2826,19 +2825,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1240777998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240777990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef97b218db6ba8b4d9ca88968939940e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicPlay
-  gameMusic: {fileID: 1471923885}
 --- !u!1 &1349597740
 GameObject:
   m_ObjectHideFlags: 0

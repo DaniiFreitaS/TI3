@@ -3019,7 +3019,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 209869443}
+      - m_Target: {fileID: 901816131}
         m_TargetAssemblyTypeName: AnalyticsButton, Assembly-CSharp
         m_MethodName: Register
         m_Mode: 1
@@ -3965,7 +3965,7 @@ MonoBehaviour:
           m_StringArgument: OpenPanel
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 209869443}
+      - m_Target: {fileID: 1215361745}
         m_TargetAssemblyTypeName: AnalyticsButton, Assembly-CSharp
         m_MethodName: Register
         m_Mode: 1
@@ -4450,7 +4450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1785777085
 MonoBehaviour:
   m_ObjectHideFlags: 0

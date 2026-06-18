@@ -10,7 +10,7 @@ public class AnalyticsButton : MonoBehaviour
     }
 
     public ButtonType buttonType = ButtonType.ButtonRestart;
-    public string buttonName = "Botão";
+    public string buttonName = "";
 
     public void Register()
     {
