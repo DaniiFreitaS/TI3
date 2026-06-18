@@ -49,6 +49,7 @@ public class AttackModeSelection : MonoBehaviour
         score = 0;
         choicesLeft = 3;
         zeroChoice = false;
+        wrongTroops.Clear();
         StartCoroutine(StartGame());
     }
 
@@ -147,6 +148,7 @@ public class AttackModeSelection : MonoBehaviour
             {
                 animator[i].SetTrigger("SwitchScene");
             }*/
+            Defesa.currentMode = 1;
             yield return new WaitForSeconds(0.3f);
             SceneManager.LoadScene("ResultScreen");
         }else if (confirmIndex==1)
