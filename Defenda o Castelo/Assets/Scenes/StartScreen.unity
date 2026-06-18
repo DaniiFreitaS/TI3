@@ -4091,7 +4091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7efb68c19b32ae4c8785b0cca8d3174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnalyticsButton
-  buttonType: 1
+  buttonType: 0
   buttonName: "Cr\xE9ditos"
 --- !u!1 &1217249321
 GameObject:
@@ -4450,7 +4450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1785777085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4463,9 +4463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31118386eadd1e54eabdde7b919baeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnalyticsManager
-  emailRemetente: seu@gmail.com
-  senhaApp: suaSenha
-  emailDestinatario: desenvolvedor@gmail.com
+  emailRemetente: macacoquandonasce2@gmail.com
+  senhaApp: ohuo vfea xjbh zisz
+  emailDestinatario: hugoalbertocamara@gmail.com
 --- !u!4 &1785777086
 Transform:
   m_ObjectHideFlags: 0

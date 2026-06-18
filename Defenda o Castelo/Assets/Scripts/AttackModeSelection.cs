@@ -143,10 +143,10 @@ public class AttackModeSelection : MonoBehaviour
     {
         if (confirmIndex == 0)
         {
-            for (int i = 0; i < 3; i++)
+            /*for (int i = 0; i < 3; i++)
             {
                 animator[i].SetTrigger("SwitchScene");
-            }
+            }*/
             yield return new WaitForSeconds(0.3f);
             SceneManager.LoadScene("ResultScreen");
         }else if (confirmIndex==1)

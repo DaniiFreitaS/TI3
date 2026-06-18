@@ -1,56 +1,75 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.IO;
 using System.Net;
 using System.Net.Mail;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class AnalyticsManager : MonoBehaviour
 {
-    public static AnalyticsManager Instance {get; private set;}
-    [Header("Coloque seu email aqui, no inspetor")]
-    public string emailRemetente = "seu@gmail.com";
+    public static AnalyticsManager Instance { get; private set; }
+
+    [Header("Coloque seu e-mail no inspetor")]
+    [SerializeField] private string emailRemetente;
     [Header("Coloque sua senha aqui, NÃO use a senha real, crie com o metódo do Roque")]
-    public string senhaApp = "suaSenha";
+    [SerializeField] private string senhaApp;
     [Header("Coloque seu email aqui também, pelo inspetor")]
-    public string emailDestinatario = "desenvolvedor@gmail.com";
+    [SerializeField] private string emailDestinatario;
 
     private string firstButton = "Null";
     private bool firstButtonClicked = false;
     private int creditsOpen = 0;
 
-    private Dictionary<string, int> restartCount = new Dictionary<string, int>();
+    private Dictionary<string, int> restartCount = new();
 
-    void Awake()
+    [System.Serializable]
+    public class RestartData
+    {
+        public string sceneName;
+        public int restartAmount;
+    }
+
+    [System.Serializable]
+    public class AnalyticsData
+    {
+        public string lastScene;
+        public string firstButton;
+        public int creditsOpen;
+        public List<RestartData> restartData;
+    }
+
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    void OnDestroy()
+    private void OnApplicationQuit()
     {
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        string sceneName = SceneManager.GetActiveScene().name;
+        string assunto = "Analytics " + sceneName;
+        AnalyticsData data = CreateAnalyticsData(sceneName);
+        string json = JsonUtility.ToJson(data, true);
+        string path = Application.persistentDataPath + "/analytics.json";
+        System.IO.File.WriteAllText(path, json);
+        SendEmail(assunto, json, path);
+        Debug.Log("O jogo saiu");
     }
 
-    private void OnSceneUnloaded(Scene lastScene)
-    {
-        string assunto = "Última cena" + lastScene.name;
-        string corpo   = CreateAnalyticsData(lastScene.name);
-        SendEmail(assunto, corpo);
-    }
-
-    public void ClickRegisterMenuButton(string nameButton)
+    public void ClickRegisterMenuButton(string buttonName)
     {
         if (!firstButtonClicked)
         {
-            firstButton = nameButton;
+            firstButton = buttonName;
             firstButtonClicked = true;
         }
     }
@@ -66,50 +85,55 @@ public class AnalyticsManager : MonoBehaviour
 
         if (!restartCount.ContainsKey(currentScene))
             restartCount[currentScene] = 0;
-            restartCount[currentScene]++;
+
+        restartCount[currentScene]++;
     }
 
-    private string CreateAnalyticsData(string sceneName)
+    private AnalyticsData CreateAnalyticsData(string sceneName)
     {
-        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-        sb.AppendLine("Última cena:" + sceneName);
-        sb.AppendLine("Primeiro botão clicado:" + firstButton);
-        sb.AppendLine("Quantos abriram os créditos:" + creditsOpen);
-        if (restartCount.Count == 0)
+        AnalyticsData data = new AnalyticsData();
+
+        data.lastScene = sceneName;
+        data.firstButton = firstButton;
+        data.creditsOpen = creditsOpen;
+        data.restartData = new List<RestartData>();
+
+        foreach (var restart in restartCount)
         {
-            sb.AppendLine("Não houve reinícios.");
-        }
-        else
-        {
-            foreach (var par in restartCount)
-                sb.AppendLine("Na cena " + par.Key + " houve " + par.Value + " reinícios");
+            data.restartData.Add(new RestartData
+            {
+                sceneName = restart.Key,
+                restartAmount = restart.Value
+            });
         }
 
-        return sb.ToString();
+        return data;
     }
-
-    private void SendEmail(string assunto, string corpo)
+    private void SendEmail(string assunto, string corpo, string path)
     {
-            try
+        try
+        {
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
             {
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
-                {
-                    Credentials = new NetworkCredential(emailRemetente, senhaApp),
-                    EnableSsl   = true
-                };
+                Credentials = new NetworkCredential(emailRemetente, senhaApp),
+                EnableSsl = true
+            };
 
-                MailMessage mensagem = new MailMessage(
-                    emailRemetente,
-                    emailDestinatario,
-                    assunto,
-                    corpo
-                );
+            MailMessage mensagem = new MailMessage(
+                emailRemetente,
+                emailDestinatario,
+                assunto,
+                corpo
+            );
 
-                client.Send(mensagem);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("[Analytics] Erro:" + e.Message);
-            }
+            Attachment attachment = new Attachment(path);
+            mensagem.Attachments.Add(attachment);
+
+            client.Send(mensagem);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Erro:" + e.Message);
+        }
     }
 }
