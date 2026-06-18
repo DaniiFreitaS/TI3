@@ -31,10 +31,11 @@ public class ResetTimer : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-        }
+        }                    
 
         if (timer >= timeLimit)
         {
+            timer = 0f;
             SceneManager.LoadScene("StartScreen");
         }
     }
