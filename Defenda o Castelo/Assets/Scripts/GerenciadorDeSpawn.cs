@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using TMPro;
+using System.Collections;
 
 public class GerenciadorDeSpawn : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
     public GameObject textoAviso;
 
     [Header("Configurações de UI e Cenas")]
+    public GameObject canvas;
     public GameObject botaoVerResultado;
     public TextMeshProUGUI confirmText;
     public static int resultadofinal = 0;
@@ -38,6 +40,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
         Defesa.currentMode = 0;
         resultadofinal = 0;
         erros.Clear();
+        StartCoroutine(StartDefense());
     }
 
     public void SelecionarPrefabInimigo(GameObject prefab)
@@ -106,5 +109,12 @@ public class GerenciadorDeSpawn : MonoBehaviour
         confirmIndex = 2;
         confirmText.text = "Tem certeza que quer desfazer suas ações?";
         botaoVerResultado.SetActive(true);
+    }
+
+    IEnumerator StartDefense()
+    {
+        canvas.SetActive(false);
+        yield return new WaitForSeconds(4.1f);
+        canvas.SetActive(true);
     }
 }
