@@ -12,6 +12,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject placement;
     public GameObject selection;
     public GameObject alertTextPrefab;
+    public RectTransform textIntro;
     public GameObject confirmMenu;
     public TextMeshProUGUI confirmInfo;
     public Animator[] animator;
@@ -162,5 +163,12 @@ public class AttackModeSelection : MonoBehaviour
         canvas.SetActive(false);
         yield return new WaitForSeconds(4.2f);
         canvas.SetActive(true);
+        textIntro.localScale = Vector3.one * 2f;
+        LeanTween.scale(textIntro.gameObject, Vector3.one, 0.8f).setEaseOutBack().
+            setOnComplete(() =>
+            {
+                LeanTween.rotateZ(textIntro.gameObject, 720f, 0.8f);
+                LeanTween.moveY(textIntro, 600f, 0.8f).setEaseOutCubic();
+            });
     }
 }
