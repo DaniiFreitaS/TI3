@@ -12,6 +12,12 @@ public class SpawnDefesa : MonoBehaviour
 
     public void Spawnar()
     {
+        for (int i = 0; i < GerenciadorDeSpawn.instancia.paneisPosicionamento.Length; i++)
+        {
+            LeanTween.cancel(GerenciadorDeSpawn.instancia.paneisPosicionamento[i].gameObject);
+            GerenciadorDeSpawn.instancia.paneisPosicionamento[i].transform.localScale = Vector3.one;
+        }
+       
         GameObject prefabDaVez = GerenciadorDeSpawn.instancia.prefabSelecionado;
 
         if (prefabDaVez != null && pontoDeSpawn != null && pontoDeSpawn.Length > 0)

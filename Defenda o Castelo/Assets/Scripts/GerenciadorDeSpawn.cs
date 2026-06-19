@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using TMPro;
 using System.Collections;
+using DentedPixel;
 
 public class GerenciadorDeSpawn : MonoBehaviour
 {
@@ -13,12 +14,14 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     [Header("Prefab Selecionado pela UI")]
     public GameObject prefabSelecionado;
+    public GameObject[] paneisPosicionamento;
     public GameObject textoAviso;
 
     [Header("Configurações de UI e Cenas")]
     public GameObject canvas;
     public GameObject botaoVerResultado;
     public TextMeshProUGUI confirmText;
+    public GameObject confirmPanel;
     public static int resultadofinal = 0;
     private int confirmIndex;
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
@@ -46,6 +49,12 @@ public class GerenciadorDeSpawn : MonoBehaviour
     public void SelecionarPrefabInimigo(GameObject prefab)
     {
         textoAviso.SetActive(false);
+        for (int i = 0; i < paneisPosicionamento.Length; i++)
+        {
+            LeanTween.cancel(paneisPosicionamento[i].gameObject);
+            LeanTween.scale(paneisPosicionamento[i].gameObject, Vector3.one * 1.2f, 0.5f)
+                .setEaseInOutSine().setLoopPingPong();
+        }
         Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         buttonsSaved.Add(button);
         //button.gameObject.SetActive(false);
@@ -92,6 +101,18 @@ public class GerenciadorDeSpawn : MonoBehaviour
         {
             SceneManager.LoadScene("StartScreen");
         }else if (confirmIndex == 2)
+        {
+            SceneManager.LoadScene("DefensePosition");
+        }
+    }
+
+    public void Cancel()
+    {
+        if (confirmIndex >= 1)
+        {
+            confirmPanel.SetActive(false);
+        }
+        else
         {
             SceneManager.LoadScene("DefensePosition");
         }
