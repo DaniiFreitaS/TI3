@@ -96,14 +96,37 @@ public class GerenciadorDeSpawn : MonoBehaviour
     {
         if (confirmIndex == 0)
         {
-            SceneManager.LoadScene("ResultScreen");
-        }else if(confirmIndex == 1)
+            //SceneManager.LoadScene("ResultScreen");
+            canvas.SetActive(false);
+            StartCoroutine(MostrarAtaqueEIrParaResultado());
+        }
+        else if(confirmIndex == 1)
         {
             SceneManager.LoadScene("StartScreen");
         }else if (confirmIndex == 2)
         {
             SceneManager.LoadScene("DefensePosition");
         }
+    }
+
+    private IEnumerator MostrarAtaqueEIrParaResultado()
+    {
+        foreach (GameObject tropa in SpawnDefesa.tropasSpawnadas)
+        {
+            Animator anim = tropa.GetComponentInChildren<Animator>();
+
+            if (anim != null)
+            {
+                anim.speed = Random.Range(0.95f, 1.05f);
+                anim.SetInteger("Atk", 1);
+            }
+
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+        }
+
+        yield return new WaitForSeconds(40f);//MUDAR TEMPO DEPOIS DE FINALIZAR OS TESTES
+
+        SceneManager.LoadScene("ResultScreen");
     }
 
     public void Cancel()

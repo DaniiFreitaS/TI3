@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnDefesa : MonoBehaviour
@@ -6,6 +7,9 @@ public class SpawnDefesa : MonoBehaviour
     public Transform[] pontoDeSpawn;
     //escala para os prefabs dos bonecos
     public float novaEscala = 6f;
+
+    //guarda todas as tropas spawnadas
+    public static List<GameObject> tropasSpawnadas = new();
 
     //id do colisor
     public int colisorID = 0;
@@ -27,6 +31,7 @@ public class SpawnDefesa : MonoBehaviour
                 Debug.Log(i);
                 GameObject novoObjeto = Instantiate(prefabDaVez, i.position, Quaternion.Euler(i.rotation.x, i.rotation.y + 90, i.rotation.z));
                 novoObjeto.transform.localScale = new Vector3(novaEscala, novaEscala, novaEscala);
+                tropasSpawnadas.Add(novoObjeto);
                 Canvas canvasDoSpawn = i.GetComponentInChildren<Canvas>();
 
                 if (canvasDoSpawn != null)
