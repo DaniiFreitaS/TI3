@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnDefesa
   pontoDeSpawn:
   - {fileID: 3070286670553686311}
-  novaEscala: 6
+  novaEscala: 3
   colisorID: 2
 --- !u!1 &1387678775124346898
 GameObject:
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnDefesa
   pontoDeSpawn:
   - {fileID: 6977586332843607167}
-  novaEscala: 6
+  novaEscala: 3
   colisorID: 3
 --- !u!1 &1454568435660480658
 GameObject:
@@ -635,8 +635,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorDeSpawn
   prefabSelecionado: {fileID: 0}
+  paneisPosicionamento: []
   textoAviso: {fileID: 0}
+  canvas: {fileID: 0}
   botaoVerResultado: {fileID: 0}
+  confirmText: {fileID: 0}
+  confirmPanel: {fileID: 0}
 --- !u!1 &2108241116712726805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1398,7 @@ MonoBehaviour:
   pontoDeSpawn:
   - {fileID: 3981826233413921103}
   - {fileID: 5829456669291967081}
-  novaEscala: 6
+  novaEscala: 3
   colisorID: 1
 --- !u!1 &5853534006484880025
 GameObject:
