@@ -45,7 +45,22 @@ public class SpawnDefesa : MonoBehaviour
             //verifica a posicao para somar
             int prefabID = prefabDaVez.GetComponent<PrefabID>().ID;
             Debug.Log(prefabID);
+            Debug.Log("ColisorID: " + colisorID);
+            switch (colisorID)
+            {
+                case 1: // Teto
+                    DadosDaBatalha.teto = prefabID;
+                    break;
 
+                case 2: // Porta
+                    DadosDaBatalha.porta = prefabID;
+                    break;
+
+                case 3: // Frente
+                    DadosDaBatalha.frente = prefabID;
+                    break;
+            }
+            Debug.Log("Salvou!");
 
             if (prefabID != colisorID)
             {

@@ -39,6 +39,11 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     private void Start()
     {
+        SpawnDefesa.tropasSpawnadas.Clear();
+        DadosDaBatalha.teto = 0;
+        DadosDaBatalha.porta = 0;
+        DadosDaBatalha.frente = 0;
+        DadosDaBatalha.venceu = false;
         wrongPlaces = 1;
         Defesa.currentMode = 0;
         resultadofinal = 0;
@@ -123,8 +128,11 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
             yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
         }
-
-        yield return new WaitForSeconds(40f);//MUDAR TEMPO DEPOIS DE FINALIZAR OS TESTES
+        Debug.Log("Teto: " + DadosDaBatalha.teto);
+        Debug.Log("Porta: " + DadosDaBatalha.porta);
+        Debug.Log("Frente: " + DadosDaBatalha.frente);
+        DadosDaBatalha.venceu = resultadofinal >= 1;
+        yield return new WaitForSeconds(4f);//MUDAR TEMPO DEPOIS DE FINALIZAR OS TESTES
 
         SceneManager.LoadScene("ResultScreen");
     }
