@@ -484,7 +484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 4}
+  m_AnchoredPosition: {x: -247, y: 109}
   m_SizeDelta: {x: 155.6659, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776678500
@@ -507,7 +507,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Seus escudeiros estavam no fundo e n\xE3o conseguiram defender sua tropa"
+  m_text: "Os escudeiros devem ficar na frente para defender, os arqueiros devem
+    ficar em cima pela dist\xE2ncia, e os lanceiros devem ficar na frente para atacar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7402b8c34aca68d479dee624023e1a5b, type: 2}
   m_sharedMaterial: {fileID: 7763980264418409350, guid: 7402b8c34aca68d479dee624023e1a5b, type: 2}
@@ -534,8 +535,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -573,7 +574,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 6.1170197, w: 0}
+  m_margin: {x: 0, y: 0, z: -521.5221, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -700,7 +701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: 22.5}
+  m_AnchoredPosition: {x: -49, y: 268}
   m_SizeDelta: {x: 155.6659, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179742417
@@ -723,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Voc\xEA perdeu"
+  m_text: Derrota
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d13dcd73743724408416f864480369f, type: 2}
   m_sharedMaterial: {fileID: -5275448466457086312, guid: 5d13dcd73743724408416f864480369f, type: 2}
@@ -750,8 +751,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -789,7 +790,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -129.6109, w: 0}
+  m_margin: {x: -97.57706, y: 0, z: -285.01172, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
