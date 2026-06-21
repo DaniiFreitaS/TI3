@@ -25,7 +25,7 @@ public class ShowResults : MonoBehaviour
         {
             if (GerenciadorDeSpawn.resultadofinal >= 1)
             {
-                resultText.text = "Vitória! Sua pontuação foi " + 2000 + "  pontos";
+                resultText.text = "Vitória! A defesa foi um sucesso!";
             }
             else
             {

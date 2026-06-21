@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,9 +65,12 @@ public class SpawnDefesa : MonoBehaviour
 
             if (prefabID != colisorID)
             {
-                GerenciadorDeSpawn.erros.Add(
-                    GerarMensagemErro(prefabID, colisorID)
-                );
+                string erro = GerarMensagemErro(colisorID);
+
+                if (!GerenciadorDeSpawn.erros.Contains(erro))
+                {
+                    GerenciadorDeSpawn.erros.Add(erro);
+                }
             }
 
             
@@ -89,33 +93,21 @@ public class SpawnDefesa : MonoBehaviour
         Spawnar();
     }
 
-    private string GerarMensagemErro(int tropa, int local)
+    private string GerarMensagemErro(int local)
     {
         switch (local)
         {
             case 1: // Teto
-                return $"{NomeDaTropa(tropa)} não faz nada no teto. ";
+                return "Os arqueiros devem ficar em cima pela distância.";
 
             case 2: // Porta
-                
-                return $"{NomeDaTropa(tropa)} tem que ficar atrás dos escudeiros. ";
+                return "Os escudeiros devem ficar na frente para defender.";
 
             case 3: // Frente
-                return $"{NomeDaTropa(tropa)} tem que ficar na frente para defender. ";
+                return "Os lanceiros devem ficar na frente para atacar.";
 
             default:
                 return "Uma tropa foi posicionada incorretamente.";
-        }
-    }
-
-    private string NomeDaTropa(int id)
-    {
-        switch (id)
-        {
-            case 1: return "Arqueiro";
-            case 2: return "Escudeiro";
-            case 3: return "Lanceiro";
-            default: return "Tropa";
         }
     }
 }
