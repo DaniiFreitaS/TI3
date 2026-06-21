@@ -22,6 +22,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
     public GameObject botaoVerResultado;
     public TextMeshProUGUI confirmText;
     public GameObject confirmPanel;
+    public Animator cameraAnimator;
     public static int resultadofinal = 0;
     private int confirmIndex;
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
@@ -116,6 +117,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     private IEnumerator MostrarAtaqueEIrParaResultado()
     {
+        canvas.SetActive(false);
+        cameraAnimator.Play("DefenseCloseIn");
         foreach (GameObject tropa in SpawnDefesa.tropasSpawnadas)
         {
             Animator anim = tropa.GetComponentInChildren<Animator>();
@@ -132,7 +135,7 @@ public class GerenciadorDeSpawn : MonoBehaviour
         Debug.Log("Porta: " + DadosDaBatalha.porta);
         Debug.Log("Frente: " + DadosDaBatalha.frente);
         DadosDaBatalha.venceu = resultadofinal >= 1;
-        yield return new WaitForSeconds(4f);//MUDAR TEMPO DEPOIS DE FINALIZAR OS TESTES
+        yield return new WaitForSeconds(3f);//MUDAR TEMPO DEPOIS DE FINALIZAR OS TESTES
 
         SceneManager.LoadScene("ResultScreen");
     }

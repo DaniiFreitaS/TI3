@@ -1,19 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class ShowResults : MonoBehaviour
 {
     public TextMeshProUGUI resultText;
+    public RectTransform scroll;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        StartCoroutine(OpenResults());
+        scroll.localScale = new Vector3(1f, 0f, 1f);
         if (Defesa.currentMode == 1)
         {
             if (AttackModeSelection.score >= 1)
             {
-                resultText.text = "Vitória! Sua pontuação foi " + AttackModeSelection.score * 1000 + " pontos";
+                resultText.text = "Vitória! Você conquistou o castelo!";
             }
             else
             {
@@ -37,4 +40,11 @@ public class ShowResults : MonoBehaviour
             }
         }
     }
+
+    IEnumerator OpenResults()
+    {
+        yield return new WaitForSeconds(1f);
+        LeanTween.scaleY(scroll.gameObject, 1f, 1f);
+    }
+
 }
