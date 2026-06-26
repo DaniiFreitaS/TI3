@@ -151,7 +151,7 @@ public class AttackModeSelection : MonoBehaviour
             }*/
             Defesa.currentMode = 1;
             yield return new WaitForSeconds(0.3f);
-            SceneManager.LoadScene("ResultScreen");
+            //SceneManager.LoadScene("ResultScreen");
         }else if (confirmIndex==1)
         {
             yield return new WaitForSeconds(0.3f);

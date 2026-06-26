@@ -477,6 +477,8 @@ GameObject:
   m_Component:
   - component: {fileID: 203591197}
   - component: {fileID: 203591196}
+  - component: {fileID: 203591199}
+  - component: {fileID: 203591198}
   m_Layer: 0
   m_Name: TimelineAttack
   m_TagString: Untagged
@@ -501,6 +503,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -8753128238774452425, guid: fb064afa649dc854b9a27a45e502e1cd, type: 2}
     value: {fileID: 108182417}
+  - key: {fileID: 8785141687510727033, guid: fb064afa649dc854b9a27a45e502e1cd, type: 2}
+    value: {fileID: 203591199}
   m_ExposedReferences:
     m_References:
     - 6e9772ba97c99fb4f98829a2753c0d28: {fileID: 108182412}
@@ -519,6 +523,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203591198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203591195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b9522af94f78a47af45ccb39534009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackTimelineController
+  personagem: {fileID: 970407274}
+  destino: {fileID: 1984152382}
+  velocidade: 15
+--- !u!114 &203591199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203591195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 72aeb978dc9c91c429995d5b18a7e1e0, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 203591198}
+          m_TargetAssemblyTypeName: AttackTimelineController, Assembly-CSharp
+          m_MethodName: Correr
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &226175083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,6 +2330,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d9618b03d329574ca3e98d1ca7d7d87, type: 3}
+--- !u!1 &970407274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3244399823613091683, guid: 1d9618b03d329574ca3e98d1ca7d7d87, type: 3}
+  m_PrefabInstance: {fileID: 880252849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1002594120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,6 +4717,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885090548}
   m_CullTransparentMesh: 1
+--- !u!4 &1984152382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+  m_PrefabInstance: {fileID: 233588861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010281967
 GameObject:
   m_ObjectHideFlags: 0
