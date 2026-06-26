@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using TMPro;
 using System.Collections;
 using DentedPixel;
+using UnityEngine.Playables;
 
 public class GerenciadorDeSpawn : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
     private int totalDeSpawns = 0; // Vai contar quantos já foram colocados
     public static int wrongPlaces;
 
+    public PlayableDirector battleTimeline;
+
     private List<Button> buttonsSaved = new List<Button>();
     private List<GameObject> troopsSaved = new List<GameObject>();
 
@@ -45,6 +48,9 @@ public class GerenciadorDeSpawn : MonoBehaviour
         DadosDaBatalha.porta = 0;
         DadosDaBatalha.frente = 0;
         DadosDaBatalha.venceu = false;
+        DadosDaBatalha.tropasTeto.Clear();
+        DadosDaBatalha.tropasFrente.Clear();
+        DadosDaBatalha.tropasPorta.Clear();
         wrongPlaces = 1;
         Defesa.currentMode = 0;
         resultadofinal = 0;
@@ -104,7 +110,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
         {
             //SceneManager.LoadScene("ResultScreen");
             canvas.SetActive(false);
-            StartCoroutine(MostrarAtaqueEIrParaResultado());
+            //StartCoroutine(MostrarAtaqueEIrParaResultado());
+            battleTimeline.Play();
         }
         else if(confirmIndex == 1)
         {

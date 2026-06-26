@@ -61,7 +61,7 @@ public class AnalyticsManager : MonoBehaviour
         string json = JsonUtility.ToJson(data, true);
         string path = Application.persistentDataPath + "/analytics.json";
         System.IO.File.WriteAllText(path, json);
-        SendEmail(assunto, json, path);
+        //SendEmail(assunto, json, path);
         Debug.Log("O jogo saiu");
     }
 

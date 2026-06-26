@@ -641,6 +641,8 @@ MonoBehaviour:
   botaoVerResultado: {fileID: 0}
   confirmText: {fileID: 0}
   confirmPanel: {fileID: 0}
+  cameraAnimator: {fileID: 0}
+  battleTimeline: {fileID: 0}
 --- !u!1 &2108241116712726805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1427,7 @@ Transform:
   m_GameObject: {fileID: 5853534006484880025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.3, y: 41.57, z: -58.01}
+  m_LocalPosition: {x: 70.3, y: 44.6, z: -58.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1726,7 +1728,7 @@ Transform:
   m_GameObject: {fileID: 7404144948318259346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70.3, y: 41.59, z: -58.03}
+  m_LocalPosition: {x: -70.3, y: 44, z: -58.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
