@@ -1666,10 +1666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b010defb75ed242b7dfb780605a635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  inimigosArqueiro:
-  - {fileID: 1525889357}
-  inimigosEscudeiro: []
-  inimigosLanceiro: []
 --- !u!114 &535935078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,6 +1685,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 113d1f957bd140f4ea284a315c2a2495, type: 2}
     - {fileID: 11400000, guid: 41bc16ae7e311e9439ef1b029669c632, type: 2}
     - {fileID: 11400000, guid: 4aa404595a871ee4c9c0a172097be8bb, type: 2}
+    - {fileID: 11400000, guid: 89946cd3bbff3a042b4cb736c5a1710b, type: 2}
+    - {fileID: 11400000, guid: e7af27a64f8b05448afa1f8729c1c087, type: 2}
+    - {fileID: 11400000, guid: fa57dca79d8e43f4994eb9e11b78d839, type: 2}
+    - {fileID: 11400000, guid: 7a8022451904e6843b17803b9a48b162, type: 2}
+    - {fileID: 11400000, guid: d806fd3e54d80754994a43dece751ed6, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1751,6 +1752,76 @@ MonoBehaviour:
         - m_Target: {fileID: 535935077}
           m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
           m_MethodName: LanceiroAtaca
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 535935077}
+          m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
+          m_MethodName: SpawnInimigosArqueiro
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 535935077}
+          m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
+          m_MethodName: SpawnInimigosEscudeiro
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 535935077}
+          m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
+          m_MethodName: SpawnInimigosLanceiro
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 535935077}
+          m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
+          m_MethodName: ResolverLanceiro
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 535935077}
+          m_TargetAssemblyTypeName: BattleTimelineController, Assembly-CSharp
+          m_MethodName: IrParaResultado
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2904,6 +2975,58 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: escala
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: spawnArqueiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: spawnLanceiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: spawnEscudeiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: inimigosArqueiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: inimigosLanceiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'spawnArqueiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1314330838}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'spawnLanceiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1119262929}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: inimigosEscudeiro.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'spawnEscudeiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1325680439}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'inimigosArqueiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8980810267694782244, guid: 107ab02a36fcbce49be1a3a2cf23f933, type: 3}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'inimigosLanceiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3244399823613091683, guid: 23ba87d6c3d487449b5c23e49a428f3a, type: 3}
+    - target: {fileID: 644910519903431907, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: 'inimigosEscudeiro.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4828037522346623964, guid: 45d6332c6df14004e8017ac12ed06a1a, type: 3}
     - target: {fileID: 1181945777495947556, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3004,6 +3127,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
+    - target: {fileID: 5015503401660951742, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5564585923540475675, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3039,6 +3166,10 @@ PrefabInstance:
     - target: {fileID: 7153382697690876845, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 24.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 8894802904438631234, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: canvas
@@ -3509,6 +3640,11 @@ MonoBehaviour:
   audioPointerEnter: {fileID: 8300000, guid: ef65cedc7d5c19a42bb8df9feaf9b012, type: 3}
   audioSource: {fileID: 598209284}
   button: {fileID: 1071198682}
+--- !u!4 &1119262929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5015503401660951742, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+  m_PrefabInstance: {fileID: 890443750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1201949552 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8894802904438631234, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
@@ -3624,6 +3760,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303957476}
   m_CullTransparentMesh: 1
+--- !u!1 &1314330837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314330838}
+  m_Layer: 0
+  m_Name: SpawnArqueiroInimigo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1314330838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314330837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.63336, y: 4.1, z: 61.89499}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321862794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,6 +3979,11 @@ MonoBehaviour:
   audioPointerEnter: {fileID: 8300000, guid: ef65cedc7d5c19a42bb8df9feaf9b012, type: 3}
   audioSource: {fileID: 598209284}
   button: {fileID: 1321862796}
+--- !u!4 &1325680439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+  m_PrefabInstance: {fileID: 890443750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369089909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,11 +4198,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3070286670553686311, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
   m_PrefabInstance: {fileID: 890443750}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1525889357 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2117340928245306832, guid: 1d9618b03d329574ca3e98d1ca7d7d87, type: 3}
-  m_PrefabInstance: {fileID: 1885682236}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1604577317
 GameObject:
@@ -5569,3 +5736,4 @@ SceneRoots:
   - {fileID: 893268082}
   - {fileID: 112540539}
   - {fileID: 535935076}
+  - {fileID: 1314330838}

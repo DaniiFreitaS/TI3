@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 3495959180959586679}
   - component: {fileID: 9044154308216449341}
   - component: {fileID: 8894802904438631234}
+  - component: {fileID: 644910519903431907}
   m_Layer: 0
   m_Name: CasteloComDispensa
   m_TagString: Untagged
@@ -540,7 +541,9 @@ Transform:
   - {fileID: 5829456669291967081}
   - {fileID: 3981826233413921103}
   - {fileID: 3070286670553686311}
+  - {fileID: 5015503401660951742}
   - {fileID: 6977586332843607167}
+  - {fileID: 7995101680743470080}
   - {fileID: 3817666373891527908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -643,6 +646,26 @@ MonoBehaviour:
   confirmPanel: {fileID: 0}
   cameraAnimator: {fileID: 0}
   battleTimeline: {fileID: 0}
+--- !u!114 &644910519903431907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454568435660480658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7b4285b12f1f44a893bbdee21781a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  inimigoPrefab: {fileID: 0}
+  escala: 3
+  spawnArqueiro: []
+  spawnEscudeiro: []
+  spawnLanceiro: []
+  inimigosArqueiro: []
+  inimigosEscudeiro: []
+  inimigosLanceiro: []
 --- !u!1 &2108241116712726805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1532,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6322600361751811352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5015503401660951742}
+  m_Layer: 0
+  m_Name: SpawnPortaInimigo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5015503401660951742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322600361751811352}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7, y: 0.22, z: -78.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1181945777495947556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6526443259855318687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1787,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1324420874646239475}
+  m_Father: {fileID: 1181945777495947556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8486717384758441307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7995101680743470080}
+  m_Layer: 0
+  m_Name: SpawnFrenteInimigo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7995101680743470080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486717384758441307}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2, y: 0.22, z: -106.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 1181945777495947556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3706931067421160207

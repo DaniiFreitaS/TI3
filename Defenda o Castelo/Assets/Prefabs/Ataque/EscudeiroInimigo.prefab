@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2193481825081782866}
   - component: {fileID: -9021926653458889918}
   m_Layer: 0
-  m_Name: Escudeiro
+  m_Name: EscudeiroInimigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
