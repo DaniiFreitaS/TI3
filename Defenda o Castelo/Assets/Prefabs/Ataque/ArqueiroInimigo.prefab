@@ -1619,6 +1619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArqueiroAnimado (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9161182324905106756, guid: 6b96dd367391831469653604da8653a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4901e81c4acd3be4face43348d67bd0e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
