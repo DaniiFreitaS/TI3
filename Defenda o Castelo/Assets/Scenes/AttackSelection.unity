@@ -638,6 +638,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b2a8ef74b11ba0c499aa8f10f11b85e5, type: 2}
     - {fileID: 11400000, guid: 62a19e15d7b631e48b7bcfde5953f79f, type: 2}
     - {fileID: 11400000, guid: f587380a846d4334b8ec895e53002ae0, type: 2}
+    - {fileID: 11400000, guid: 8c90b859985633e4982e94cfc551b774, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -698,6 +699,20 @@ MonoBehaviour:
         - m_Target: {fileID: 203591198}
           m_TargetAssemblyTypeName: AttackTimelineController, Assembly-CSharp
           m_MethodName: ResolverCorpoACorpo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 203591198}
+          m_TargetAssemblyTypeName: AttackTimelineController, Assembly-CSharp
+          m_MethodName: IrParaResultado
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
