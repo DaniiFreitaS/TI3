@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AttackModeSelection : MonoBehaviour
 {
+
+    public PlayableDirector timeline;
+
     //posicionamento
     public GameObject placement;
     public GameObject selection;
@@ -172,8 +176,11 @@ public class AttackModeSelection : MonoBehaviour
             }*/
             Defesa.currentMode = 1;
             yield return new WaitForSeconds(0.3f);
+            canvas.SetActive(false);
+            timeline.Play();
             //SceneManager.LoadScene("ResultScreen");
-        }else if (confirmIndex==1)
+        }
+        else if (confirmIndex==1)
         {
             yield return new WaitForSeconds(0.3f);
             SceneManager.LoadScene("StartScreen");
@@ -193,3 +200,4 @@ public class AttackModeSelection : MonoBehaviour
             });
     }
 }
+

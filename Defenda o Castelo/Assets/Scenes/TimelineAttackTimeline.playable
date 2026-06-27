@@ -53,10 +53,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
-  m_Time: 3.9833333333333334
+  m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 72aeb978dc9c91c429995d5b18a7e1e0, type: 2}
+--- !u!114 &-5423761908181772230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
+  m_Time: 7
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: f587380a846d4334b8ec895e53002ae0, type: 2}
 --- !u!74 &-4083606580773116510
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -120,9 +136,9 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: 69.69999, y: 5.63, z: -5.68929}
-        inSlope: {x: 0, y: 0, z: -0.0000037863797}
-        outSlope: {x: 0, y: 0, z: -0.0000037863797}
+        value: {x: 0, y: 0, z: 0.22000027}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -130,8 +146,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 4
         value: {x: 69.699974, y: 5.63, z: -5.689294}
-        inSlope: {x: -0.000015322634, y: 0, z: 0}
-        outSlope: {x: -0.000015322634, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: -0.0000043067853}
+        outSlope: {x: 0, y: 0, z: -0.0000043067853}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 5.516667
+        value: {x: 69.69996, y: 5.63, z: -5.6892977}
+        inSlope: {x: -0.00003077403, y: 0, z: 0}
+        outSlope: {x: -0.00003077403, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -139,8 +164,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 5.983333
         value: {x: 48.239998, y: 5.4, z: -5.6891546}
-        inSlope: {x: -0.000006139751, y: 0, z: 0}
-        outSlope: {x: -0.000006139751, y: 0, z: 0}
+        inSlope: {x: -0.000008813034, y: 0, z: 0}
+        outSlope: {x: -0.000008813034, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -223,7 +248,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 69.69999
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -233,8 +258,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 4
         value: 69.699974
-        inSlope: -0.000015322634
-        outSlope: -0.000015322634
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5.516667
+        value: 69.69996
+        inSlope: -0.00003077403
+        outSlope: -0.00003077403
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -242,8 +276,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 5.983333
         value: 48.239998
-        inSlope: -0.000006139751
-        outSlope: -0.000006139751
+        inSlope: -0.000008813034
+        outSlope: -0.000008813034
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -280,7 +314,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 5.63
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -289,6 +323,15 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
+        value: 5.63
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5.516667
         value: 5.63
         inSlope: 0
         outSlope: 0
@@ -337,9 +380,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -5.68929
-        inSlope: -0.0000037863797
-        outSlope: -0.0000037863797
+        value: 0.22000027
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -347,6 +390,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 4
         value: -5.689294
+        inSlope: -0.0000043067853
+        outSlope: -0.0000043067853
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5.516667
+        value: -5.6892977
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -536,6 +588,22 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []
+--- !u!114 &-2990876091628501866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
+  m_Time: 5.983333333333333
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 62a19e15d7b631e48b7bcfde5953f79f, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +626,22 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+--- !u!114 &4682687350801648191
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
+  m_Time: 3.9833333333333334
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: b2a8ef74b11ba0c499aa8f10f11b85e5, type: 2}
 --- !u!114 &8785141687510727033
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -582,3 +666,6 @@ MonoBehaviour:
   m_Markers:
     m_Objects:
     - {fileID: -5902300498648355772}
+    - {fileID: 4682687350801648191}
+    - {fileID: -2990876091628501866}
+    - {fileID: -5423761908181772230}
