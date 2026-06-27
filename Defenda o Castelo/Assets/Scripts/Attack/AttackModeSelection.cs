@@ -45,6 +45,7 @@ public class AttackModeSelection : MonoBehaviour
     public GameObject canvas;
     void Start()
     {
+        DadosAtaque.Limpar();
         Defesa.currentMode = 1;
         currentIndex = 0;
         score = 0;
@@ -86,7 +87,27 @@ public class AttackModeSelection : MonoBehaviour
         GameObject instance = Instantiate(troop[currentIndex], new Vector3(0, -2.5f, xPos), Quaternion.Euler(0, -90, 0));
         troopsSaved.Add(instance);
         animator[positionIndex] = instance.GetComponent<Animator>();
-        
+
+        int prefabID = instance.GetComponent<PrefabID>().ID;
+
+        switch (positionIndex)
+        {
+            case 0: // Trás
+                DadosAtaque.tras = prefabID;
+                DadosAtaque.tropasTras.Add(instance);
+                break;
+
+            case 1: // Meio
+                DadosAtaque.meio = prefabID;
+                DadosAtaque.tropasMeio.Add(instance);
+                break;
+
+            case 2: // Frente
+                DadosAtaque.frente = prefabID;
+                DadosAtaque.tropasFrente.Add(instance);
+                break;
+        }
+
         int result = resultTable[currentIndex, positionIndex];
 
         score += result;
