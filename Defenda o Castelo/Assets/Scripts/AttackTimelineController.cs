@@ -9,8 +9,9 @@ public class AttackTimelineController : MonoBehaviour
     public Transform[] destinoMeio;
     public Transform[] destinoFrente;
 
-    [Header("Velocidade")]
-    public float velocidade = 6f;
+    [Header("Movimentação")]
+    public float velocidade = 10f;
+    public float alturaExtra = 0.5f;
 
     [Header("Inimigos Arqueiro")]
     public Animator[] inimigosArqueiro;
@@ -56,16 +57,17 @@ public class AttackTimelineController : MonoBehaviour
                 else
                     destino = destinos[Mathf.Clamp(i, 0, destinos.Length - 1)];
 
-                Vector3 pos = tropas[i].transform.position;
+                Vector3 destinoFinal = new Vector3(
+                                            destino.position.x,
+                                            destino.position.y + alturaExtra,
+                                            destino.position.z);
 
-                pos.z = Mathf.MoveTowards(
-                    pos.z,
-                    destino.position.z,
+                tropas[i].transform.position = Vector3.MoveTowards(
+                    tropas[i].transform.position,
+                    destinoFinal,
                     velocidade * Time.deltaTime);
 
-                tropas[i].transform.position = pos;
-
-                if (Mathf.Abs(pos.z - destino.position.z) > 0.05f)
+                if (Vector3.Distance(tropas[i].transform.position, destinoFinal) > 0.05f)
                     terminou = false;
             }
 

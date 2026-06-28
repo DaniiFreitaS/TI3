@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,6 +46,10 @@ public class BattleTimelineController : MonoBehaviour
     {
         if (DadosDaBatalha.teto == 1)
         {
+            StartCoroutine(MatarInimigosArqueiro());
+        }
+        else
+        {
             foreach (GameObject inimigo in EnemySpawner.instancia.inimigos)
             {
                 if (inimigo == null) continue;
@@ -53,13 +58,9 @@ public class BattleTimelineController : MonoBehaviour
 
                 if (anim != null)
                 {
-                    anim.SetFloat("Vida", 0);
-                    anim.SetTrigger("Dano");
+                    anim.SetInteger("Atk", 1);
                 }
             }
-        }
-        else
-        {
             foreach (GameObject tropa in DadosDaBatalha.tropasTeto)
             {
                 if (tropa == null) continue;
@@ -72,6 +73,25 @@ public class BattleTimelineController : MonoBehaviour
                     anim.SetTrigger("Dano");
                 }
             }
+        }
+    }
+
+    IEnumerator MatarInimigosArqueiro()
+    {
+        foreach (GameObject inimigo in EnemySpawner.instancia.inimigos)
+        {
+            if (inimigo == null)
+                continue;
+
+            Animator anim = inimigo.GetComponentInChildren<Animator>();
+
+            if (anim != null)
+            {
+                anim.SetFloat("Vida", 0);
+                anim.SetTrigger("Dano");
+            }
+
+            yield return new WaitForSeconds(Random.Range(0.05f, 0.25f));
         }
     }
 
@@ -112,6 +132,17 @@ public class BattleTimelineController : MonoBehaviour
         }
         else
         {
+            foreach (GameObject inimigo in EnemySpawner.instancia.inimigos)
+            {
+                if (inimigo == null) continue;
+
+                Animator anim = inimigo.GetComponentInChildren<Animator>();
+
+                if (anim != null)
+                {
+                    anim.SetInteger("Atk", 1);
+                }
+            }
             foreach (GameObject tropa in DadosDaBatalha.tropasFrente)
             {
                 if (tropa == null) continue;
@@ -165,6 +196,17 @@ public class BattleTimelineController : MonoBehaviour
         }
         else
         {
+            foreach (GameObject inimigo in EnemySpawner.instancia.inimigos)
+            {
+                if (inimigo == null) continue;
+
+                Animator anim = inimigo.GetComponentInChildren<Animator>();
+
+                if (anim != null)
+                {
+                    anim.SetInteger("Atk", 1);
+                }
+            }
             foreach (GameObject tropa in DadosDaBatalha.tropasPorta)
             {
                 if (tropa == null) continue;

@@ -613,7 +613,8 @@ MonoBehaviour:
   - {fileID: 77042705}
   destinoFrente:
   - {fileID: 1984152382}
-  velocidade: 15
+  velocidade: 10
+  alturaExtra: 1
   inimigosArqueiro:
   - {fileID: 1832162807}
   - {fileID: 814347888}
@@ -1079,11 +1080,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 39509569972b42f41a9c5af5539a1296, type: 3}
     - target: {fileID: 5015503401660951742, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.31
+      value: -3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015503401660951742, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 5015503401660951742, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -105.97
+      value: -107.75
       objectReference: {fileID: 0}
     - target: {fileID: 5564585923540475675, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_Sprite
@@ -1123,7 +1128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.24
+      value: 3.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995101680743470080, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -108.18
       objectReference: {fileID: 0}
     - target: {fileID: 8894802904438631234, guid: a1eb761fe5deed946b9a9b00fc51b72f, type: 3}
       propertyPath: textoAviso
@@ -1771,6 +1784,7 @@ MonoBehaviour:
   - {fileID: 8980810267694782244, guid: e0ea1df780690f64b80b0090b2cbc806, type: 3}
   - {fileID: 4828037522346623964, guid: 8772187be3e86024089b3cf04674d5a4, type: 3}
   - {fileID: 3244399823613091683, guid: 1d9618b03d329574ca3e98d1ca7d7d87, type: 3}
+  novaEscala: 2
   resetButton: {fileID: 472921024}
   canvas: {fileID: 1240777990}
 --- !u!4 &531181059
@@ -2165,7 +2179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2844.611, y: -390.21417}
+  m_AnchoredPosition: {x: 2844.6113, y: -390.21417}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711100752

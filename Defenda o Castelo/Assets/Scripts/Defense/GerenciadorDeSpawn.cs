@@ -36,6 +36,8 @@ public class GerenciadorDeSpawn : MonoBehaviour
 
     public static List<string> erros = new List<string>();
 
+    public GameObject[] ExercitoASerDestruido;
+
     private void Awake()
     {
         instancia = this;
@@ -111,6 +113,15 @@ public class GerenciadorDeSpawn : MonoBehaviour
             //SceneManager.LoadScene("ResultScreen");
             canvas.SetActive(false);
             //StartCoroutine(MostrarAtaqueEIrParaResultado());
+            DadosDaBatalha.venceu = resultadofinal >= 1;
+            foreach (GameObject i in ExercitoASerDestruido)
+            {
+                if (i != null)
+                {
+                    Destroy(i);
+                }
+            }
+
             battleTimeline.Play();
         }
         else if(confirmIndex == 1)

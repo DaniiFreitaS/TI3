@@ -35,6 +35,9 @@ public class AttackModeSelection : MonoBehaviour
     public static List<string> wrongTroops = new List<string>();
     private string[] troopErrors = { "Arqueiros são vulneráveis na frente! ", "Escudeiros não conseguem defender ninguém estando atrás! ", "Lanceiros não conseguem acertar de trás! "};
 
+    [Header("Escala")]
+    public float novaEscala = 3f;
+
     //outros
     public static int score;
     private int choicesLeft;
@@ -91,6 +94,8 @@ public class AttackModeSelection : MonoBehaviour
         GameObject instance = Instantiate(troop[currentIndex], new Vector3(0, -2.5f, xPos), Quaternion.Euler(0, -90, 0));
         troopsSaved.Add(instance);
         animator[positionIndex] = instance.GetComponent<Animator>();
+
+        instance.transform.localScale = Vector3.one * novaEscala;
 
         int prefabID = instance.GetComponent<PrefabID>().ID;
 
