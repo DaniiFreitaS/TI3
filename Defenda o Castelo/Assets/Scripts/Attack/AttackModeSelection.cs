@@ -125,7 +125,6 @@ public class AttackModeSelection : MonoBehaviour
         {
             wrongTroops.Add(troopErrors[currentIndex]);
             instance.GetComponent<PrefabID>().InstantiateAlert(alertTextPrefab);
-            //alertImage.Insert(troopsSaved.Count, alert);
         }
 
         selection.SetActive(true);
